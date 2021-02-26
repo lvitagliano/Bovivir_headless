@@ -1,0 +1,2467 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot with arrows 1`] = `
+<div
+  className="styles__Container-sc-1qwpunr-0 cXcJsx"
+>
+  <div
+    className="styles__Slider-sc-1qwpunr-1 fcgiGs"
+  >
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with arrows and button steps 1`] = `
+<div
+  className="styles__Container-sc-1qwpunr-0 cXcJsx"
+>
+  <div
+    className="styles__Slider-sc-1qwpunr-1 fcgiGs"
+  >
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with arrows and circle steps 1`] = `
+<div
+  className="styles__Container-sc-1qwpunr-0 cXcJsx"
+>
+  <div
+    className="styles__Slider-sc-1qwpunr-1 fcgiGs"
+  >
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with button steps 1`] = `
+<div
+  className="styles__Container-sc-1qwpunr-0 cXcJsx"
+>
+  <div
+    className="styles__Slider-sc-1qwpunr-1 fcgiGs"
+  >
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with circle steps 1`] = `
+<div
+  className="styles__Container-sc-1qwpunr-0 cXcJsx"
+>
+  <div
+    className="styles__Slider-sc-1qwpunr-1 fcgiGs"
+  >
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot without navegation 1`] = `
+<div
+  className="styles__Container-sc-1qwpunr-0 cXcJsx"
+>
+  <div
+    className="styles__Slider-sc-1qwpunr-1 fcgiGs"
+  >
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="styles__Item-sc-1qwpunr-2 gYBSkc"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      <div
+        className="style__BannerContainer-sc-12kjn23-0 iytjXJ"
+      >
+        <div
+          className="style__InfoContainer-sc-12kjn23-1 hiHkgB"
+        >
+          <h1
+            className="style__TitleBonvivir-sc-12kjn23-2 etbLNa"
+          >
+            club bonvivir
+          </h1>
+          <h2
+            className="style__Titleh2-sc-12kjn23-3 kLUsYe"
+          >
+            Se parte 
+            <span>
+              del club
+            </span>
+          </h2>
+          <p
+            className="style__Paragraph-sc-12kjn23-5 hJmtQp"
+          >
+            Recibi todos los meses una seleccion de vinos realizada 
+            <br />
+            por nuestros sommerliers en catas a ciegas
+          </p>
+          <hr
+            className="style__Linea-sc-12kjn23-6 ivNeMt"
+          />
+          <h3
+            className="style__Titleh3-sc-12kjn23-4 eIbRwU"
+          >
+            Los beneficios de ser parte
+          </h3>
+          <ul
+            className="style__ListUl-sc-12kjn23-7 hzHiPG"
+          >
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Envio sin cargo a todo el pais
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Contenido exclusivo
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Etiquetas originales
+            </li>
+            <li
+              className="style__ListItem-sc-12kjn23-8 flZhjy"
+            >
+              <img
+                className="style__CheckImg-sc-12kjn23-9 brOMfq"
+                src="./images/checkHeadless.svg"
+              />
+              Descuentos en tienda Bonvivir
+            </li>
+          </ul>
+          <div
+            className="style__ButtonContainer-sc-12kjn23-10 ejpFsH"
+          >
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              Conoce el club
+            </button>
+            <button
+              className="style__Button-sc-12kjn23-11 kgRPid"
+            >
+              unite ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

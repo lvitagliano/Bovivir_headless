@@ -1,0 +1,463 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot with arrows 1`] = `
+<div
+  className="styles__Container-sc-9yyox9-0 dQvigK"
+>
+  <div
+    className="styles__Slider-sc-9yyox9-1 VBKmF"
+  >
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 1
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 2
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 3
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 4
+    </div>
+  </div>
+  <div
+    className="styles__ConocerMas-sc-9yyox9-6 lgOfcN"
+  >
+    <div
+      className="styles__ContainerInfo-sc-9yyox9-7 gFRRSx"
+    >
+      <div
+        className="styles__ImgSelecciones-sc-17snx2g-0 dIWEuT"
+      >
+        <img
+          className="styles__BottleSelection-sc-17snx2g-1 ceHIwj"
+          src="./images/bottleSelection1.png"
+        />
+        <p
+          className="commonStyles__Text2-g2rlbn-2 commonStyles__Text3-g2rlbn-3 bRmgTK dXIwJk"
+          color="#888"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias sapiente sint placeat illum voluptatibus, quibusdam enim consectetur quasi.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with arrows and button steps 1`] = `
+<div
+  className="styles__Container-sc-9yyox9-0 dQvigK"
+>
+  <div
+    className="styles__Slider-sc-9yyox9-1 VBKmF"
+  >
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 1
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 2
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 3
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 4
+    </div>
+  </div>
+  <div
+    className="styles__ConocerMas-sc-9yyox9-6 lgOfcN"
+  >
+    <div
+      className="styles__ContainerInfo-sc-9yyox9-7 gFRRSx"
+    >
+      <div
+        className="styles__ImgSelecciones-sc-17snx2g-0 dIWEuT"
+      >
+        <img
+          className="styles__BottleSelection-sc-17snx2g-1 ceHIwj"
+          src="./images/bottleSelection1.png"
+        />
+        <p
+          className="commonStyles__Text2-g2rlbn-2 commonStyles__Text3-g2rlbn-3 bRmgTK dXIwJk"
+          color="#888"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias sapiente sint placeat illum voluptatibus, quibusdam enim consectetur quasi.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with arrows and circle steps 1`] = `
+<div
+  className="styles__Container-sc-9yyox9-0 dQvigK"
+>
+  <div
+    className="styles__Slider-sc-9yyox9-1 VBKmF"
+  >
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 1
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 2
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 3
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 4
+    </div>
+  </div>
+  <div
+    className="styles__ConocerMas-sc-9yyox9-6 lgOfcN"
+  >
+    <div
+      className="styles__ContainerInfo-sc-9yyox9-7 gFRRSx"
+    >
+      <div
+        className="styles__ImgSelecciones-sc-17snx2g-0 dIWEuT"
+      >
+        <img
+          className="styles__BottleSelection-sc-17snx2g-1 ceHIwj"
+          src="./images/bottleSelection1.png"
+        />
+        <p
+          className="commonStyles__Text2-g2rlbn-2 commonStyles__Text3-g2rlbn-3 bRmgTK dXIwJk"
+          color="#888"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias sapiente sint placeat illum voluptatibus, quibusdam enim consectetur quasi.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with button steps 1`] = `
+<div
+  className="styles__Container-sc-9yyox9-0 dQvigK"
+>
+  <div
+    className="styles__Slider-sc-9yyox9-1 VBKmF"
+  >
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 1
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 2
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 3
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 4
+    </div>
+  </div>
+  <div
+    className="styles__ConocerMas-sc-9yyox9-6 lgOfcN"
+  >
+    <div
+      className="styles__ContainerInfo-sc-9yyox9-7 gFRRSx"
+    >
+      <div
+        className="styles__ImgSelecciones-sc-17snx2g-0 dIWEuT"
+      >
+        <img
+          className="styles__BottleSelection-sc-17snx2g-1 ceHIwj"
+          src="./images/bottleSelection1.png"
+        />
+        <p
+          className="commonStyles__Text2-g2rlbn-2 commonStyles__Text3-g2rlbn-3 bRmgTK dXIwJk"
+          color="#888"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias sapiente sint placeat illum voluptatibus, quibusdam enim consectetur quasi.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with circle steps 1`] = `
+<div
+  className="styles__Container-sc-9yyox9-0 dQvigK"
+>
+  <div
+    className="styles__Slider-sc-9yyox9-1 VBKmF"
+  >
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 1
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 2
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 3
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 4
+    </div>
+  </div>
+  <div
+    className="styles__ConocerMas-sc-9yyox9-6 lgOfcN"
+  >
+    <div
+      className="styles__ContainerInfo-sc-9yyox9-7 gFRRSx"
+    >
+      <div
+        className="styles__ImgSelecciones-sc-17snx2g-0 dIWEuT"
+      >
+        <img
+          className="styles__BottleSelection-sc-17snx2g-1 ceHIwj"
+          src="./images/bottleSelection1.png"
+        />
+        <p
+          className="commonStyles__Text2-g2rlbn-2 commonStyles__Text3-g2rlbn-3 bRmgTK dXIwJk"
+          color="#888"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias sapiente sint placeat illum voluptatibus, quibusdam enim consectetur quasi.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`matches snapshot without navegation 1`] = `
+<div
+  className="styles__Container-sc-9yyox9-0 dQvigK"
+>
+  <div
+    className="styles__Slider-sc-9yyox9-1 VBKmF"
+  >
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item0"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 1
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item1"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 2
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item2"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 3
+    </div>
+    <div
+      className="styles__Item-sc-9yyox9-2 hlWgUY"
+      data-testid="item3"
+      style={
+        Object {
+          "transform": "translateX(0%)",
+        }
+      }
+    >
+      item 4
+    </div>
+  </div>
+  <div
+    className="styles__ConocerMas-sc-9yyox9-6 lgOfcN"
+  >
+    <div
+      className="styles__ContainerInfo-sc-9yyox9-7 gFRRSx"
+    >
+      <div
+        className="styles__ImgSelecciones-sc-17snx2g-0 dIWEuT"
+      >
+        <img
+          className="styles__BottleSelection-sc-17snx2g-1 ceHIwj"
+          src="./images/bottleSelection1.png"
+        />
+        <p
+          className="commonStyles__Text2-g2rlbn-2 commonStyles__Text3-g2rlbn-3 bRmgTK dXIwJk"
+          color="#888"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias sapiente sint placeat illum voluptatibus, quibusdam enim consectetur quasi.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

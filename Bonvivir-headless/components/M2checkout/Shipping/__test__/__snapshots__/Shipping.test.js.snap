@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shipping Data renders properly 1`] = `
+<DocumentFragment>
+  <form>
+    <section
+      class="styles__SectionDataContainer-sc-849pqq-0 EOzVa"
+    >
+      <div
+        class="styles__FormCard-sc-849pqq-2 eocFuN"
+        width="90%"
+      >
+        <div
+          class="styles__ContainerOneRow-sc-849pqq-5 knnnuq"
+        >
+          <span
+            class="MuiSwitch-root"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-16 MuiSwitch-switchBase WithStyles(ForwardRef(Switch))-switchBase-1 MuiSwitch-colorSecondary PrivateSwitchBase-checked-17 Mui-checked WithStyles(ForwardRef(Switch))-checked-2"
+              data-testid="toggle"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input-19 MuiSwitch-input"
+                  name="checkbox"
+                  type="checkbox"
+                  value=""
+                />
+                <span
+                  class="MuiSwitch-thumb"
+                />
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track WithStyles(ForwardRef(Switch))-track-3"
+            />
+          </span>
+          <p>
+            Enviar a esta dirección
+          </p>
+        </div>
+        <div
+          class="styles__ContainerOneRow-sc-849pqq-5 hjtEVl"
+        >
+          <div
+            class="styles__ContainerOneColumn-sc-849pqq-4 fSJYUJ"
+            width="45%"
+          >
+            <label
+              class="LabelForm-sc-1dbpd2j-0 hybBcM"
+            >
+              Nombres *
+            </label>
+            <input
+              class="InputForm__InputFormBase-sc-55v2ww-0 cYuDKr"
+              disabled=""
+              name="firstname"
+              placeholder="John"
+              type="text"
+              value=""
+              width="100%"
+            />
+          </div>
+          <div
+            class="styles__ContainerOneColumn-sc-849pqq-4 fSJYUJ"
+            width="45%"
+          >
+            <label
+              class="LabelForm-sc-1dbpd2j-0 hybBcM"
+            >
+              Apellidos *
+            </label>
+            <input
+              class="InputForm__InputFormBase-sc-55v2ww-0 cYuDKr"
+              disabled=""
+              name="lastname"
+              placeholder="Doe"
+              type="text"
+              value=""
+              width="100%"
+            />
+          </div>
+        </div>
+        <div
+          class="styles__ContainerOneColumn-sc-849pqq-4 laNRzh"
+          width="100%"
+        >
+          <label
+            class="LabelForm-sc-1dbpd2j-0 hybBcM"
+          >
+            Número telefónico *
+          </label>
+          <input
+            class="InputForm__InputFormBase-sc-55v2ww-0 cYuDKr"
+            disabled=""
+            name="telephone"
+            placeholder="1112345678"
+            type="text"
+            value=""
+            width="100%"
+          />
+        </div>
+        <div
+          class="styles__ContainerOneRow-sc-849pqq-5 hjtEVl"
+        >
+          <div
+            class="styles__ContainerOneColumn-sc-849pqq-4 blZfOP"
+            width="65%"
+          >
+            <label
+              class="LabelForm-sc-1dbpd2j-0 hybBcM"
+            >
+              Calle *
+            </label>
+            <input
+              class="InputForm__InputFormBase-sc-55v2ww-0 boIKID"
+              disabled=""
+              name="street"
+              placeholder="Avenida del Libertador"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="styles__ContainerOneColumn-sc-849pqq-4 cxDNMr"
+            width="30%"
+          >
+            <label
+              class="LabelForm-sc-1dbpd2j-0 hybBcM"
+            >
+              Altura *
+            </label>
+            <input
+              class="InputForm__InputFormBase-sc-55v2ww-0 boIKID"
+              disabled=""
+              name="number"
+              placeholder="101"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="styles__ContainerOneRow-sc-849pqq-5 hjtEVl"
+        >
+          <div
+            class="styles__ContainerOneColumn-sc-849pqq-4 cxDNMr"
+            width="30%"
+          >
+            <label
+              class="LabelForm-sc-1dbpd2j-0 hybBcM"
+            >
+              Código Postal *
+            </label>
+            <input
+              class="InputForm__InputFormBase-sc-55v2ww-0 boIKID"
+              disabled=""
+              name="postcode"
+              placeholder="1638"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="styles__ContainerOneColumn-sc-849pqq-4 cxDNMr"
+            width="30%"
+          >
+            <label
+              class="LabelForm-sc-1dbpd2j-0 hybBcM"
+            >
+              Piso
+            </label>
+            <input
+              class="InputForm__InputFormBase-sc-55v2ww-0 boIKID"
+              disabled=""
+              name="floor"
+              placeholder="10"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="styles__ContainerOneColumn-sc-849pqq-4 cxDNMr"
+            width="30%"
+          >
+            <label
+              class="LabelForm-sc-1dbpd2j-0 hybBcM"
+            >
+              Depto.
+            </label>
+            <input
+              class="InputForm__InputFormBase-sc-55v2ww-0 boIKID"
+              disabled=""
+              name="apartm"
+              placeholder="203"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          class="styles__ContainerOneRow-sc-849pqq-5 hjtEVl"
+        >
+          <div
+            class="styles__ContainerOneColumn-sc-849pqq-4 fCNnjz"
+            width="70%"
+          >
+            <div
+              class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+              role="progressbar"
+              style="width: 40px; height: 40px;"
+            >
+              <svg
+                class="MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="20.2"
+                  stroke-width="3.6"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <input
+          hidden=""
+          name="regionData"
+        />
+        <div
+          class="styles__ContainerOneRow-sc-849pqq-5 hjtEVl"
+        >
+          <div
+            class="styles__ContainerOneColumn-sc-849pqq-4 blZfOP"
+            width="65%"
+          >
+            <div
+              class="MuiFormControl-root"
+            >
+              <b>
+                Tipo de envio *
+              </b>
+              <div
+                class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+                style="height: 32px;"
+              >
+                <div
+                  aria-haspopup="listbox"
+                  aria-labelledby=" "
+                  class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputSelect MuiOutlinedInput-inputSelect"
+                  role="button"
+                  tabindex="0"
+                >
+                  Enviado
+                </div>
+                <input
+                  type="hidden"
+                  value="flatrate"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+                <fieldset
+                  aria-hidden="true"
+                  class="PrivateNotchedOutline-root-106 MuiOutlinedInput-notchedOutline"
+                  style="padding-left: 8px;"
+                >
+                  <legend
+                    class="PrivateNotchedOutline-legend-107"
+                    style="width: 0px;"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </legend>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="styles__ContainerOneRow-sc-849pqq-5 hjtEVl"
+        >
+          <p
+            class="styles__ShipmentDescription-pg3cxi-0 fWZuzK"
+          >
+            Retiro en un punto de entrega, Solo AMBA: entre 48 a 72 hs habiles.
+          </p>
+        </div>
+        <div
+          class="styles__ContainerOneRow-sc-849pqq-5 hjtEVl"
+        >
+          <button
+            class="styles__CustomButton-sc-849pqq-8 hQUwVG secondary"
+            style="margin: 0px;"
+            width="fit-content"
+          >
+            <p
+              style="text-transform: uppercase; margin: 0px;"
+            >
+              calcular envio
+            </p>
+          </button>
+          <b
+            class="styles__ShipmentValue-pg3cxi-1 iMjKUG"
+          />
+        </div>
+        <input
+          hidden=""
+          name="step"
+          value=""
+        />
+        <input
+          hidden=""
+          name="id"
+          value="0"
+        />
+      </div>
+    </section>
+    <input
+      style="display: none;"
+      type="submit"
+    />
+  </form>
+</DocumentFragment>
+`;

@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot Article 1`] = `
+<div
+  className="styles__Container-sz6pgk-0 jIZfZg"
+>
+  <div
+    className="commonStyles__MainTitle-g2rlbn-6 cPQUrt"
+    color="#333"
+    data-testid="_title"
+  >
+    Main
+    <b>
+      Title
+    </b>
+  </div>
+  <div
+    className="styles__TextContainer-sz6pgk-3 bsuLhD"
+  >
+    <p
+      className="commonStyles__Text2-g2rlbn-2 dOwDuJ"
+      color="#888"
+    >
+      This is a description of the component
+    </p>
+  </div>
+  <div
+    className="styles__ArticleContainer-sz6pgk-1 jzxWni"
+  >
+    <div
+      className="articleStyle__Container-tnp56t-0 dbTQlN"
+    >
+      <img
+        className="articleStyle__DivImage-tnp56t-1 iUQLGN"
+        src="https://images.pexels.com/photos/3019019/pexels-photo-3019019.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+      />
+      <p
+        className="commonStyles__SubTitle-g2rlbn-7 eSUazo"
+        data-testid="subtitle"
+      >
+        Titulo item 1
+      </p>
+      <div
+        className="articleStyle__DescContainer-tnp56t-3 eKbERj"
+      >
+        <p
+          className="commonStyles__Text2-g2rlbn-2 bRmgTK"
+          color="#888"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <a
+        className="articleStyle__Link-tnp56t-2 xVjgb"
+        data-testid="link"
+        href="/test_link1"
+      >
+        Link Test 1
+      </a>
+    </div>
+    <div
+      className="articleStyle__Container-tnp56t-0 dbTQlN"
+    >
+      <img
+        className="articleStyle__DivImage-tnp56t-1 iUQLGN"
+        src="https://images.pexels.com/photos/3019019/pexels-photo-3019019.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+      />
+      <p
+        className="commonStyles__SubTitle-g2rlbn-7 eSUazo"
+        data-testid="subtitle"
+      >
+        Titulo item 2
+      </p>
+      <div
+        className="articleStyle__DescContainer-tnp56t-3 eKbERj"
+      >
+        <p
+          className="commonStyles__Text2-g2rlbn-2 bRmgTK"
+          color="#888"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <a
+        className="articleStyle__Link-tnp56t-2 xVjgb"
+        data-testid="link"
+        href="/test_link2"
+      >
+        Link Test2
+      </a>
+    </div>
+    <div
+      className="articleStyle__Container-tnp56t-0 dbTQlN"
+    >
+      <img
+        className="articleStyle__DivImage-tnp56t-1 iUQLGN"
+        src="https://images.pexels.com/photos/3019019/pexels-photo-3019019.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+      />
+      <p
+        className="commonStyles__SubTitle-g2rlbn-7 eSUazo"
+        data-testid="subtitle"
+      >
+        Titulo item 3
+      </p>
+      <div
+        className="articleStyle__DescContainer-tnp56t-3 eKbERj"
+      >
+        <p
+          className="commonStyles__Text2-g2rlbn-2 bRmgTK"
+          color="#888"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+      <a
+        className="articleStyle__Link-tnp56t-2 xVjgb"
+        data-testid="link"
+        href="/test_link3"
+      >
+        Link Test 3
+      </a>
+    </div>
+  </div>
+  <div
+    className="styles__ButtonContainer-sz6pgk-2 jfZRQq"
+  >
+    <button
+      className="styles__CustomButton-sc-849pqq-8 hQUwVG secondary"
+      data-testid="_btn1"
+      onClick={[Function]}
+      width="fit-content"
+    >
+      <p
+        style={
+          Object {
+            "margin": 0,
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        IR AL BLOG
+      </p>
+    </button>
+    <button
+      className="styles__CustomButton-sc-849pqq-8 hQUwVG secondary"
+      data-testid="_btn2"
+      onClick={[Function]}
+      width="fit-content"
+    >
+      <p
+        style={
+          Object {
+            "margin": 0,
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        VER MAS MÁRIDAJES
+      </p>
+    </button>
+  </div>
+</div>
+`;

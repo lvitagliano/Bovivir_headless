@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="styles__Container-sc-1tm1w0k-0 cJGTRs"
+>
+  <div
+    className="styles__Slider-sc-1tm1w0k-1 cPhcOT"
+  />
+  <svg
+    aria-hidden="true"
+    className="MuiSvgIcon-root styles__ChevronLeftIconCircle-sc-1tm1w0k-3 eCnzfH arrow-left arrow-icon"
+    focusable="false"
+    onClick={[Function]}
+    role="presentation"
+    style={
+      Object {
+        "display": "",
+      }
+    }
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+    />
+  </svg>
+  <svg
+    aria-hidden="true"
+    className="MuiSvgIcon-root styles__ChevronRightIconCircle-sc-1tm1w0k-2 cGaVoN arrow-right arrow-icon"
+    focusable="false"
+    onClick={[Function]}
+    role="presentation"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+    />
+  </svg>
+</div>
+`;

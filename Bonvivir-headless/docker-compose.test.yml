@@ -1,0 +1,11 @@
+version: '3.7'
+ 
+services:
+ 
+  headless-dev:
+    container_name: reactstorefront-test
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    ports:
+      - '443:443'

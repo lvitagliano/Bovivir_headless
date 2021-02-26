@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot Article 1`] = `
+<div
+  className="articleStyle__Container-tnp56t-0 dbTQlN"
+>
+  <img
+    className="articleStyle__DivImage-tnp56t-1 iUQLGN"
+    src="https://images.pexels.com/photos/3019019/pexels-photo-3019019.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+  />
+  <p
+    className="commonStyles__SubTitle-g2rlbn-7 eSUazo"
+    data-testid="subtitle"
+  >
+    Titulo item 1
+  </p>
+  <div
+    className="articleStyle__DescContainer-tnp56t-3 eKbERj"
+  >
+    <p
+      className="commonStyles__Text2-g2rlbn-2 bRmgTK"
+      color="#888"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+  </div>
+  <a
+    className="articleStyle__Link-tnp56t-2 xVjgb"
+    data-testid="link"
+    href="/test_link"
+  >
+    Link Test
+  </a>
+</div>
+`;
