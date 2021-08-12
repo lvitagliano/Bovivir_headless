@@ -45,7 +45,7 @@ var query_1 = __importDefault(require("./query"));
  * Magento 2: subcategory fetcher
  */
 function fetcher(_a) {
-    var _b = _a.categoryId, categoryId = _b === void 0 ? null : _b, _c = _a.pageSize, pageSize = _c === void 0 ? 16 : _c, _d = _a.currentPage, currentPage = _d === void 0 ? 1 : _d, _e = _a.filter, filter = _e === void 0 ? '' : _e, _f = _a.sort, sort = _f === void 0 ? '' : _f, _g = _a.search, search = _g === void 0 ? '' : _g;
+    var _b = _a.categoryId, categoryId = _b === void 0 ? null : _b, _c = _a.pageSize, pageSize = _c === void 0 ? 16 : _c, _d = _a.currentPage, currentPage = _d === void 0 ? 1 : _d, _e = _a.filter, filter = _e === void 0 ? "" : _e, _f = _a.sort, sort = _f === void 0 ? "" : _f, _g = _a.search, search = _g === void 0 ? "" : _g;
     return __awaiter(this, void 0, void 0, function () {
         var query, rawData;
         return __generator(this, function (_h) {

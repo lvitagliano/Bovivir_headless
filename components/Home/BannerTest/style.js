@@ -6,7 +6,6 @@ const BannerContainer = styled.div`
   background-repeat: no-repeat;
   height: 30em;
   width: 100%;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -9,6 +9,15 @@ const Container = styled.div`
   display:flex;
   flex-direction:column;
   justify-content: space-between;
+  margin-top: 110px;
+`
+const ContainerContent = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media ${device.maxMobileL} { 
+    flex-direction: column;
+  }
 `
 
 const RowContainer = styled.div`
@@ -64,17 +73,35 @@ const List = styled.ul`
 
 const Wording = styled.div`
   text-align:center;
-  padding:10px;
+  padding: 15px 50px;
   font-size:0.7em;
 
   @media ${device.maxMobileL} { 
     margin-top:3em;
   }  
 `
+const RegretButtonContainer = styled.a`
+  text-decoration: none;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20em;
+  padding: 5px;
+  font-size: 0.8em;
+`
+const RegretButtonContent = styled.p`
+  margin: 0;
+  color: #fff;
+`
+
 export {
   Container,
   RowContainer,
   List,
   SocialNetwork,
-  Wording
+  Wording,
+  RegretButtonContainer,
+  RegretButtonContent,
+  ContainerContent
 }

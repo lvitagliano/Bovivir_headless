@@ -50,7 +50,9 @@ module.exports = app => {
 
       try {
         const resp = await kiwiApi.get(
-          `${process.env.KIWI_API_URL}/standarized/address.json`,
+          process.env.KIWI_API_URL
+            ? `${process.env.KIWI_API_URL}/standarized/address.json`
+            : 'https://qa-api.covedisa.com/standarized/address.json',
           config
         )
 
@@ -71,12 +73,50 @@ module.exports = app => {
       })
     }
   })
+
+  app.post('/KiwiAPI/cardCLN', async (req, res) => {
+    const loginResponse = await login()
+
+    if (loginResponse.status == 200) {
+      const token = loginResponse.data.token
+      const config = {
+        headers: { Authorization: `Bearer ${token}` },
+        params: {
+          cardNumber: req.body.covedisa_tarjeta_cln,
+        },
+      }
+
+      try {
+        const resp = await kiwiApi.get(
+          process.env.KIWI_API_URL
+            ? `${process.env.KIWI_API_URL}/cln/user.json`
+            : 'https://qa-api.covedisa.com/cln/user.json',
+          config
+        )
+
+        res.status(200).json({
+          success: true,
+          result: resp.data,
+        })
+      } catch (err) {
+        res.status(err.response.status || 400).json({
+          success: false,
+          result: 'Tarjeta inválida.',
+        })
+      }
+    } else {
+      res.status(loginResponse.status).json({
+        success: false,
+        result: loginResponse.message,
+      })
+    }
+  })
 }
 
 const login = () => {
   const params = new URLSearchParams()
-  params.append('_username', process.env.KIWI_API_USERNAME)
-  params.append('_password', process.env.KIWI_API_PASSWORD)
+  params.append('_username', process.env.KIWI_API_USERNAME || 'bonvivir')
+  params.append('_password', process.env.KIWI_API_PASSWORD || 'C0v3D1z4!*4992')
 
   const config = {
     headers: {
@@ -84,5 +124,11 @@ const login = () => {
     },
   }
 
-  return kiwiApi.post(`${process.env.KIWI_API_URL}/login_check`, params, config)
+  return kiwiApi.post(
+    process.env.KIWI_API_URL
+      ? `${process.env.KIWI_API_URL}/login_check`
+      : 'https://qa-api.covedisa.com/login_check',
+    params,
+    config
+  )
 }

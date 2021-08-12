@@ -1,8 +1,8 @@
-version: '3.7'
+version: '3.3'
  
 services:
  
-  headless-dev:
+  headless-test:
     container_name: reactstorefront-test
     build:
       context: .

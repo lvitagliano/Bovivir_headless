@@ -37,7 +37,7 @@ function normalizer(rawData) {
                     newHref.startsWith('/gear') ||
                     newHref.startsWith('/training') ||
                     newHref.startsWith('/sale')) {
-                    newHref = "/s" + newHref;
+                    newHref = "/tienda" + newHref;
                 }
                 else {
                     newHref = "/p" + newHref;

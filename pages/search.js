@@ -1,12 +1,9 @@
-import Subcategory from './s/[subcategoryId]'
-import fetchFromAPI from 'react-storefront/props/fetchFromAPI'
-import createLazyProps from 'react-storefront/props/createLazyProps'
+import Subcategory from './tienda/[subcategoryId]'
+import { useRouter } from 'next/router'
 
-Subcategory.getInitialProps = createLazyProps(opts => {
-  if(opts.asPath.split('?')[1]){
-    opts.asPath = `/search?${opts.asPath.split('?')[1]}`
-  }
-  return fetchFromAPI(opts)
-})
-
-export default Subcategory
+export default function search() {
+  const router = useRouter()
+  const formatRouter = router.asPath.split('=')[1]
+  const formatSearchFilter = formatRouter.split('%20').join(' ')
+  return <Subcategory search={formatSearchFilter} />
+}

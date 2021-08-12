@@ -15,15 +15,15 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function Wordpress({ router }) {
-  let iFrameID = ''
+  let iFrameID = 0
 
   function resizeIframe() {
-    iFrameID = document.getElementById('idIframe')
-    console.log(iFrameID)
+    iFrameID = window.parent.document.getElementById('idIframe')?.contentWindow?.document?.body?.scrollHeight
+    WithIframe(iFrameID)
   }
 
   useEffect(() => {
-    resizeIframe
+    resizeIframe()
   }, [iFrameID])
 
   const wordpress = useSelector(state => state.wordpress)
@@ -47,11 +47,15 @@ function Wordpress({ router }) {
     />
   )
 
-  return (
-    <div style={{ width: '100%', height: '265vh' }}>
-      <WPIframe />
-    </div>
-  )
+  const WithIframe = sizes => {
+    return (
+      <div style={{ width: '100%', height: '265vh' }}>
+        <WPIframe />
+      </div>
+    )
+  }
+
+  return WithIframe()
 }
 
 export default withRouter(Wordpress)

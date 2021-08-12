@@ -34,7 +34,8 @@ const initialState = {
     step5: {},
     currentStep:1,
     loading:true,
-    error:null
+    error:null, 
+    pointHOP: []
 }
 
 export const registerReducer = (state=initialState, action) => {

@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import device from '../../../Styles/device'
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: ${props => props.fdirection || 'row'};
   height: 42em;
   overflow: hidden;
   background-image: url(${props => props.image});
@@ -13,10 +11,9 @@ const Container = styled.div`
   padding-bottom: 3em;
 
   @media ${device.maxMobileL} {
-    flex-direction: column;
-    align-items: center;
+    background-color: #edeae1;
+    background-image: none;
     height: 100%;
-
     & > div:first-child {
       margin-top: 2em;
       /* height: 30em; */

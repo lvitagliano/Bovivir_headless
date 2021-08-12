@@ -2,28 +2,21 @@ import styled from 'styled-components'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
 import device from '../../../Styles/device'
 
-const Container = styled.div.attrs(props => ({
+const ContainerStepper = styled.div.attrs(props => ({
   bgcolor: props.bgcolor || '#edeae1',
 }))`
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  padding: 10px 20px;
   background-color: ${props => props.bgcolor};
+`
+const Dot = styled(FiberManualRecordIcon).attrs(props => ({
+  active: props.active ? 1 : 0,
+}))`
+  color: ${props => (props.active ? props.theme.colors.secondary : props.theme.colors.primary)};
+`
 
-  @media ${device.maxMobileL} {
-    flex-direction: column;
-    align-items: center;
-  }
-`
-const Dot = styled(FiberManualRecordIcon)`
-  color: ${props => props.theme.colors.primary};
-`
 const ActiveDot = styled(FiberManualRecordIcon)`
   color: ${props => props.theme.colors.secondary};
 `
+
 const DivImage = styled.img.attrs(props => ({
   src: props.image,
 }))`
@@ -48,12 +41,12 @@ const DivStepper = styled.div`
   margin-left: 2em;
 
   @media ${device.maxMobileL} {
-    width: 100vw;
+    width: 100%;
     padding: 10px;
   }
 `
-const Label = styled.p`
+const Label = styled.div`
   margin-top: 15px;
 `
 
-export { Container, DivImage, DivStepper, Dot, ActiveDot, Label }
+export { ContainerStepper, DivImage, DivStepper, Dot, ActiveDot, Label }

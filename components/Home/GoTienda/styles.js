@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import device from '../../../Styles/device'
 
-const Container = styled.div`
+const ContaineGoTienda = styled.div`
   display: flex;
   flex-direction: ${props => props.flexDirection};
   justify-content: space-evenly;
@@ -9,7 +9,7 @@ const Container = styled.div`
   padding: 10px 20px;
 `
 const ContainerDisplayer = styled.div`
-  width: 80%;
+  width: 100%;
   margin: auto;
 `
 
@@ -36,4 +36,4 @@ const DivText = styled.div`
   padding: 40px 0px;
 `
 
-export { Container, ContainerDisplayer, DivImage, DivText }
+export { ContaineGoTienda, ContainerDisplayer, DivImage, DivText }

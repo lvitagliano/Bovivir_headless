@@ -16,9 +16,11 @@ const BannerContainer = styled.div.attrs(props => ({
   display: flex;
   position: relative;
   left: ${props => props.left || ''};
+  top: ${props => props.top || ''};
 
   @media ${device.maxMobileL} {
-    left: '';
+    left: ${props => props.leftMobile || '1.1rem'};
+    height: ${props => props.left && '25em'};
   }
 `
 const InfoContainer = styled.div.attrs(props => ({
@@ -53,7 +55,7 @@ const Linea = styled.div`
 const ListUl = styled.ul`
   list-style: none;
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 0px 0;
   height: 110px;
   display: flex;
   flex-direction: column;
@@ -72,7 +74,11 @@ const ButtonContainer = styled.div`
   justify-content: flex-start;
 
   & button {
-    margin-right: 3em;
+    margin-right: 2em;
+  }
+  @media ${device.maxMobileL} {
+    width: 25em;
+    align-items: center;
   }
 `
 const CustomCheck = styled(Check)`

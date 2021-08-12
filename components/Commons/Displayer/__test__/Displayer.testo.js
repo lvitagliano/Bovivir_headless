@@ -16,8 +16,8 @@ const items = [
   {title: 'Titulo item 7'},
 ];
 
-    const innerComp = items.map(item => 
-        <Paper elevation={3}>
+    const innerComp = items.map((item, i) => 
+        <Paper key={i} elevation={3}>
             <Grid
                 container
                 direction="column"

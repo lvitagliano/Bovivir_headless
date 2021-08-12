@@ -25,16 +25,22 @@ axiosM2ApiInstance.interceptors.response.use(
   },
   error => {
     if (!error?.response?.status) {
-      console.log('ERROR EN EL SERVIDOR', error)
       return Promise.reject(error)
     } else if (
       error.response &&
       error.response.status === 401 &&
       error.response.statusText === 'Unauthorized'
     ) {
-      console.log('API Error Unauthorized:', error.response)
       return Promise.reject(error.response)
-    } else console.log('axiosM2ApiInstance Error response:', error.response)
+    } else if (
+      error.response &&
+      error.response.status === 400 &&
+      error.response.statusText === 'Bad Request'
+    ) {
+      return Promise.reject(error.response)
+    } else {
+      return Promise.reject(error.response)
+    }
   }
 )
 
@@ -44,18 +50,27 @@ export const createCustomerM2 = async data => {
       email: data.email,
       firstname: data.name,
       lastname: data.lastname,
+      dob: data.dob,
+      taxvat: data.taxvat,
+      gender: data.gender
     },
-    password: data.password,
   }
   try {
     const res = await axiosM2ApiInstance.post(`/m2API/createCustomerM2`, newCustomerM2)
     if (res && res.status === 200) {
       return res
-    } else {
-      return res
     }
   } catch (err) {
     return err
+  }
+}
+
+export const auth0token = async token => {
+  try {
+    const auth = await axiosM2ApiInstance.post('/m2API/auth0token', token)
+    return auth
+  } catch (error) {
+    return error
   }
 }
 
@@ -86,6 +101,19 @@ export const setBillingAddress = async (personalData, data) => {
   }
 }
 
+export const getPointHoP = async () => {
+  try {
+    let res = await axiosM2ApiInstance.get(`/hop/pickup_points`)
+    if (res && res.status === 200) {
+      return res.data[0]
+    } else {
+      console.log(res)
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
 export const setShippingAddress = async (personalData, data) => {
   const address = {
     addressInformation: {
@@ -104,26 +132,26 @@ export const setShippingAddress = async (personalData, data) => {
   }
 }
 
-export const setBillingAndShippingAddress = (addresses, types) => {
+export const setBillingAndShippingAddress = (addresses, types, hop) => {
+  let extension_attributes = types?.carrier_code === 'hop' ? hop : {}
+
   const address = {
     addressInformation: {
       shipping_address: {
-        region: addresses?.region?.region,
-        region_id: addresses?.region?.region_id,
-        region_code: addresses?.region?.region_code,
         country_id: 'AR',
-        street: addresses?.street,
-        telephone: addresses?.telephone,
-        city: addresses?.city,
+        street: addresses?.street || '',
+        telephone: addresses?.telephone || '',
+        city: addresses?.city || '',
         postcode: addresses?.postcode || '',
         email: addresses?.email || '',
-        firstname: addresses?.firstname,
-        lastname: addresses?.lastname,
+        firstname: addresses?.firstname || '',
+        lastname: addresses?.lastname || '',
         same_as_billing: 0,
         save_in_address_book: 0,
       },
       shipping_method_code: types?.method_code,
       shipping_carrier_code: types?.carrier_code,
+      extension_attributes,
     },
   }
   return axiosM2ApiInstance.post(`/m2API/setBillingAndShippingAddress`, address)
@@ -135,6 +163,23 @@ export const estimateShippingMethods = async personalData => {
   }
   try {
     let res = await axiosM2ApiInstance.post(`/m2API/estimateShippingMethodsById`, address)
+    if (res && res.status === 200) {
+      return res.data
+    }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+export const estimateShippingMethodsByPostCode = async postcode => {
+  const address = {
+    address: {
+      postcode,
+      country_id: 'AR',
+    },
+  }
+  try {
+    let res = await axiosM2ApiInstance.post(`/m2API/estimateShippingMethodsByPostcode`, address)
     if (res && res.status === 200) {
       return res.data
     }
@@ -178,12 +223,12 @@ export const getRegions = async () => {
   }
 }
 
+export const subscribeEmailToNewsletterClient = data =>
+  axiosM2ApiInstance.post(`/m2API/subscribeEmailToNewsletterServer`, data)
+
 const normalizeAddress = (personalData, data) => {
-  const regionAndCity = data.region_code
   return {
-    region: data.region,
-    region_id: data.region_id,
-    region_code: data.region_code,
+    region: 'BUENOS AIRES',
     country_id: 'AR', //ver si se agregan mas
     street: [data.street || '', data.number || '', data.floor || '', data.apartm || ''],
     postcode: data.postcode || '',

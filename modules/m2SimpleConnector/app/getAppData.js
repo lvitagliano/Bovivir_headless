@@ -60,8 +60,8 @@ function normalizeMenuItems(items) {
     }
     return items.map(function (item) { return ({
         text: get_1.default(item, 'name'),
-        as: "/s" + get_1.default(item, 'url'),
-        href: '/s/[...categorySlug]',
+        as: "/tienda" + get_1.default(item, 'url'),
+        href: '/tienda/[...categorySlug]',
         items: normalizeMenuItems(get_1.default(item, 'items', [])),
     }); });
 }

@@ -1,11 +1,14 @@
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import SeleccionesComponent from '../../components/Club/Selecciones'
 import { getSelections } from '../../services/Client/GraphQl/wp/GQLAPI'
+import { getAllSelections } from '../../store/actions/selectionActions'
 
 export default function Selecciones(props) {
   const data = [
     {
       logoSelection: './images/logo_exclusiva.png',
-      titleSelection: 'Seleccion Exclusiva',
+      titleSelection: 'Exclusiva',
       textSelection:
         'Descubri y disfruta diferentes cepas y estilos de vinos cuidadosamente elegidos',
       cajaSelection: './images/Mockup_SE_2020.png',
@@ -19,7 +22,7 @@ export default function Selecciones(props) {
     },
     {
       logoSelection: './images/logo_altagama.png',
-      titleSelection: 'Seleccion Alta Gama',
+      titleSelection: 'Alta Gama',
       textSelection:
         'Pensada para descubrir y disfrutar vinos exepcionales, complejos y con gran potencial de guarda',
       cajaSelection: './images/Mockup_AG_2020.png',
@@ -39,7 +42,7 @@ export default function Selecciones(props) {
     },
     {
       logoSelection: './images/logo_exclusivablanca.png',
-      titleSelection: 'Seleccion Exclusiva Blanca',
+      titleSelection: 'Exclusiva Blanca',
       textSelection:
         'Pensada para descubrir y disfrutar una propuesta variada de vinos blancos y tintos',
       cajaSelection: './images/Mockup_SE_2020.png',
@@ -48,7 +51,24 @@ export default function Selecciones(props) {
       cantidadSelection: 'en cajas de 4 botellas',
     },
   ]
-  return <SeleccionesComponent data={props.selection} />
+
+  const dispatch = useDispatch()
+
+  const { selections, loading: selectionsLoading } = useSelector(
+    state => state.selections.allSelections
+  )
+
+  useEffect(() => {
+    dispatch(getAllSelections())
+  }, [])
+
+  return (
+    <SeleccionesComponent
+      data={props.selection}
+      loading={selectionsLoading}
+      selections={selections}
+    />
+  )
 }
 
 Selecciones.getInitialProps = async context => {

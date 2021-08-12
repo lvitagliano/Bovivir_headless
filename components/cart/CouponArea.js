@@ -28,22 +28,30 @@ const styles = theme => ({
   },
   chip: {
     '& .MuiChip-root ': {
-      backgroundColor: `${ScTheme.colors.secondary}`,
+      marginTop: '1rem',
+      borderRadius: '2px',
+      backgroundColor: '#e0e0e0',
+      border: '1px solid rgb(199 193 193 / 75%)',
+      color: '#a6a6b5',
     },
   },
 })
 const useStyles = makeStyles(styles)
 const CouponArea = () => {
   const classes = useStyles()
-  const { cart, loading } = useSelector(state => state.m2)
+  const { cart } = useSelector(state => state.m2)
   const { isLogedInM2, isLogedInAuth0 } = useSelector(state => state.user)
   const { items, applied_coupons } = cart
   const dispatch = useDispatch()
   const [coupon, setCoupon] = useState('')
+  const [loading, setloading] = useState(false)
+
   const handleClickCoupon = async () => {
-    if (isLogedInM2 && isLogedInAuth0) {
-      await dispatch(addCouponToCart(coupon))
+    if (isLogedInM2 && isLogedInAuth0 && coupon !== '') {
+      setloading(true)
+      await dispatch(addCouponToCart(coupon.trim()))
       setCoupon('')
+      setloading(false)
     }
   }
 
@@ -70,8 +78,8 @@ const CouponArea = () => {
                   Cupón Aplicado al carrito
                 </Typography>
                 <div style={{ marginTop: '10px' }}>
-                  {applied_coupons?.map(c => (
-                    <div className={classes.chip}>
+                  {applied_coupons?.map((c, i) => (
+                    <div key={i} className={classes.chip}>
                       <Chip label={c.code} onDelete={handleDelete} color="primary" />
                     </div>
                   ))}
@@ -94,14 +102,14 @@ const CouponArea = () => {
                 type="text"
                 width="100%"
                 onChange={e => setCoupon(e.target.value)}
-              ></InputForm>
-              <div></div>
+              />
               <Button
                 onClick={handleClickCoupon}
                 style={{ marginTop: '10px' }}
                 width="50%"
                 text="Aplicar Cupón"
-              ></Button>
+                disabled={coupon.trim().length === 0}
+              />
             </>
           )}
         </div>

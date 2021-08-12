@@ -1,62 +1,90 @@
 import React from 'react'
-import {
-    ShoppingcartContainer,
-    ShoppingcartContainerChild,
-    ShoppingcartIconButton,
-    PriceBold,
-    FlexContainer,
-    ButtonIcon
-} from "./styles"
-import CreateIcon from '@material-ui/icons/Create';
-import DeleteIcon from '@material-ui/icons/Delete';
-import { Button } from '@material-ui/core'
+import { ShoppingcartContainer, ShoppingcartContainerChild, PriceBold } from './styles'
+import Button from '../Commons/Button'
 import Link from 'react-storefront/link/Link'
+import { useRouter } from 'next/router'
+import { useSelector, useDispatch } from 'react-redux'
+import { setLoginRequest } from '../../store/actions/userAction'
+import { updateItemsInCart, removeItemFromCart } from '../../store/actions/m2Action'
+import { price } from 'react-storefront/utils/format'
+import CartItem from '../cart/CartItem'
 
-const PopubShoppingcart = () => {
-    return (
+const PopubShoppingcart = ({ closePop }) => {
+  const router = useRouter()
+  const dispatch = useDispatch()
+  const { cart } = useSelector(state => state.m2)
+  const { isLogedInM2, isLogedInAuth0 } = useSelector(state => state.user)
+  const {
+    cart: { items },
+  } = useSelector(state => state.m2)
+
+  const handleClick = () => {
+    if (isLogedInM2 && isLogedInAuth0) {
+      router.push(`/m2/step1`, `/m2/step1`, { shallow: true })
+      closePop()
+    } else {
+      dispatch(setLoginRequest(true))
+    }
+  }
+
+  return (
+    <>
+      {items.length > 0 ? (
         <>
-            <ShoppingcartContainer>
-              <ShoppingcartContainerChild>
-                <p>1 item in cart</p>
-                <p>
-                  Cart subtotal: <br/> 
-                  <PriceBold>$1,650.00</PriceBold>
-                </p>
-              </ShoppingcartContainerChild>
-              <Button variant="contained" color="primary" size="medium" style={{margin: '20px'}}>Ir al Checkout</Button>
-            </ShoppingcartContainer>
-
-            <ShoppingcartContainerChild style={{alignItems: 'flex-end'}}>
-              <FlexContainer>
-                <div  style={{display: 'flex', flexDirection: 'row'}}>
-                  <a href="" style={{
-                    textDecoration: 'none'
-                    }}>
-                      <img src=" " alt="festejos" />
-                  </a>   
-                </div>
-                <div style={{display: 'flex', flexDirection: 'column'}}>
-                  <a href="" style={{
-                    textDecoration: 'none'
-                    }}> festejos
-                  </a>
-                  <p style={{fontWeight: 'bold'}}>$1,650.00</p>
-                  <p>Qty: 1</p>
-                </div>
-              </FlexContainer>
-              <ShoppingcartIconButton>
-                <ButtonIcon><CreateIcon style={{color: '#82807f'}}/></ButtonIcon>
-                <ButtonIcon><DeleteIcon style={{color: '#82807f'}}/></ButtonIcon>
-              </ShoppingcartIconButton>
+          <ShoppingcartContainer>
+            <ShoppingcartContainerChild>
+              <p>
+                ({items.length}{' '}
+                {items.length === 1 ? 'producto en el carrito' : 'productos en el carrito'})
+              </p>
+              <p>
+                SubTotal: <br />
+                <PriceBold>
+                  {price(cart?.prices?.subtotal_with_discount_excluding_tax?.value || 0)}
+                </PriceBold>
+              </p>
             </ShoppingcartContainerChild>
+            <Button
+              onClick={handleClick}
+              text="Finalizar compra"
+              width="95%"
+              alignSelf="center"
+              margin="0 0 10px 0"
+            />
+          </ShoppingcartContainer>
 
-            <ShoppingcartContainer>
-              <Link href="/cart">
-                <a style={{textAlign:'center', padding: '20px', textDecoration: 'none'}}>View and Edit Cart</a>
-              </Link>
-            </ShoppingcartContainer>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              overflow: 'auto',
+              maxHeight: '21rem',
+            }}
+          >
+            {items.length
+              ? items.map((item, i) => {
+                  return <CartItem key={`${item.id}_${item.quantity}`} product={item} />
+                })
+              : null}
+          </div>
+
+          <ShoppingcartContainer>
+            <Link href="/cart" as="/cart" onClick={closePop}>
+              <a style={{ textAlign: 'center', padding: '20px', textDecoration: 'none' }}>
+                Ir al carrito
+              </a>
+            </Link>
+          </ShoppingcartContainer>
         </>
-    )
+      ) : (
+        <ShoppingcartContainer>
+          <ShoppingcartContainerChild style={{ justifyContent: 'center' }}>
+            <b>No hay productos en el carrito.</b>
+          </ShoppingcartContainerChild>
+        </ShoppingcartContainer>
+      )}
+    </>
+  )
 }
 
 export default PopubShoppingcart

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from '../../../Styles/device'
 
 const Container = styled.div`
   position: relative; 
@@ -104,6 +105,8 @@ const StepperButton = styled.li`
     &.active {
       border-top: 2px solid #fff !important;
     }
+
+
 `
 
 export {

@@ -10,11 +10,7 @@ module.exports = app => {
 
       if (userSessionId === null) res.status(404).send('No User Session ID')
 
-      const result = await redis.setExState(
-        userSessionId,
-        JSON.stringify(req.body),
-        60 * 60 * 24 * 8
-      )
+      const result = await redis.setExState(userSessionId, JSON.stringify(req.body), 60 * 60 * 24)
 
       if (result !== 'OK') {
         res.status(404).send('Redux State can not be stored.')
@@ -54,8 +50,7 @@ module.exports = app => {
       const userSessionId = cookies?.userSessionId || null
 
       if (userSessionId !== null) {
-        const result = await redis.delState(userSessionId, JSON.stringify(req.body))
-
+        const result = await redis.delState(userSessionId)
         if (result) {
           res.status(200).send('Redis Session deleted')
         }

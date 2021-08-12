@@ -20,6 +20,7 @@ const getWedOfMonth = date => {
   return wedArray;
 };
 
+
 const getRangeOfDates = (start, end) => {
   const fromDate = moment(start);
   const toDate = moment(end).add(15, 'days');

@@ -8,6 +8,12 @@ export const NavBar = styled.nav`
   display:flex;
   justify-content: space-between;
 
+  &#menu {
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+  }
+
   & .arrow-left {
     cursor: pointer;
     margin-left: 20px;
@@ -47,13 +53,13 @@ export const NavBar = styled.nav`
     background-color: white;
     border-width: 1px 1px 0;
     margin: 0 1em;
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
     border: 0px solid #000000;
-    -webkit-box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 20px -3px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 5px -1px rgba(0,0,0,0.5);
 
     transition: all .125s ease-in-out;
     -webkit-transition: all .125s ease-in-out;
@@ -68,7 +74,6 @@ export const NavBar = styled.nav`
     position: relative;
     display: block;
     color: #7a7879;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, .125);
     white-space:nowrap;
   }
 
@@ -84,13 +89,13 @@ export const NavBar = styled.nav`
   & .sub-menu li:first-child:hover {
     color: #762057;
     background-color: #EEE;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 4px 4px 4px 4px;
   }
 
   & .sub-menu li:last-child:hover {
     color: #762057;
     background-color: #EEE;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 4px 4px 4px 4px;
   }
 
   & .sub-menu li:not(first-child):not(last-child):hover {
@@ -159,9 +164,10 @@ export const NavBar = styled.nav`
 
       & .sub-menu {
         border-width: 0;
+        border-top: 1px solid #ccc;
         margin: 0;
         position: absolute;
-        top: 100%;
+        top: 102%;
         left: 0;
         min-width: 12em;
 

@@ -1,6 +1,6 @@
 export default {
   title: 'main-theme',
-  colors:{
+  colors: {
     primary: '#888',
     secondary: '#762057',
   },

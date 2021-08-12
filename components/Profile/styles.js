@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import device from '../../Styles/device'
 
 const MenuProfile = styled.div`
   display: flex;
@@ -44,6 +45,11 @@ const DetailProfile = styled.div`
   height: 100%;
   padding: 2em 3em;
   border-radius: 3px;
+
+  @media ${device.maxMobileL} {
+    width: 100%;
+    padding: 0.5rem;
+  }
 `
 
 const TitleContent = styled.div`
@@ -73,5 +79,70 @@ const Content = styled.div`
   color: #575759;
   align-items: center;
 `
-
-export { MenuProfile, ItemProfile, DetailProfile, OutlineGrey, Content, TitleContent }
+const Title = styled.h2`
+  font-size: 1.5em;
+  color: #333;
+`
+const SubTitle = styled.p`
+  font-size: 0.9em;
+  color: #9e9e9e;
+  /* font-weight: bold; */
+  margin: 0 0 5px 0;
+`
+const Text = styled.p`
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: #333;
+`
+const DetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+const DetailsContainerContent = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  width: 90%;
+`
+const TableContainer = styled.div`
+  outline: 1px solid #d2d2d2;
+  background: #fff;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-around;
+`
+const TableContainerColumn = styled.div`
+  width: url(${props => props.width});
+`
+const TableTitleColumn = styled.h1`
+  margin: 0;
+  padding: 5px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 0.9em;
+`
+const TableParagraphRow = styled.p`
+  padding: 10px 0 10px 0;
+  margin: 0;
+  font-weight: url(${props => props.fontWeight});
+`
+export {
+  MenuProfile,
+  ItemProfile,
+  DetailProfile,
+  OutlineGrey,
+  Content,
+  TitleContent,
+  Title,
+  SubTitle,
+  Text,
+  DetailsContainer,
+  DetailsContainerContent,
+  TableContainer,
+  TableContainerColumn,
+  TableTitleColumn,
+  TableParagraphRow,
+}

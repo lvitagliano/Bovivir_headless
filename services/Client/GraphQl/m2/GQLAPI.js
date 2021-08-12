@@ -1,10 +1,13 @@
 import { GraphQLClient, request } from 'graphql-request'
+import axios from 'axios'
 import {
   GET_CUSTOMER_CART,
+  GET_GUEST_CART,
   GET_CUSTOMER_ORDERS,
   SEARCH_PRODUCTS,
   GET_CUSTOMER_WISHLIST,
   GET_CUSTOMER_ADDRESSBOOK,
+  CATEGORIES_OF_MENU_SHOP,
 } from './query'
 import {
   GENERATE_TOKEN,
@@ -21,11 +24,12 @@ import {
 } from './mutation'
 import Cookies from 'js-cookie'
 
-const uriM2 = `${process.env.M2_CONFIG_HOST || 'https://qa-tienda2.bonvivir.com'}/graphql`
+const uriM2 = `${process.env.M2_CONFIG_HOST ||
+  process.env.NEXT_PUBLIC_M2_CONFIG_HOST ||
+  'https://qa-tienda2.bonvivir.com'}/graphql`
 
-const setToken = () => {
+export const setToken = () => {
   const token = Cookies.getJSON('user')?.m2DataLogIn || ''
-
   if (token)
     return {
       headers: {
@@ -34,16 +38,9 @@ const setToken = () => {
     }
 }
 
-const m2HttpGQL = new GraphQLClient(uriM2, setToken())
+let m2HttpGQL = new GraphQLClient(uriM2)
 
-export const generateToken = async variables => {
-  let respuesta
-  await request(uriM2, GENERATE_TOKEN, variables).then(res => {
-    m2HttpGQL.setHeader('authorization', `Bearer ${res.generateCustomerToken.token}`)
-    respuesta = res
-  })
-  return respuesta
-}
+export const removeBearerToken = () => (m2HttpGQL = new GraphQLClient(uriM2))
 
 export const searchProducts = variables => {
   return request(uriM2, SEARCH_PRODUCTS, variables)
@@ -53,8 +50,13 @@ export const createEmptyCart = () => {
   return request(uriM2, CREATE_EMPTY_CART)
 }
 
-export const getCustomerCart = () => {
+export const getCustomerCart = async () => {
+  m2HttpGQL = new GraphQLClient(uriM2, await setToken())
   return m2HttpGQL.request(GET_CUSTOMER_CART)
+}
+
+export const getGuestCart = async variables => {
+  return m2HttpGQL.request(GET_GUEST_CART, { cart_id: variables })
 }
 
 export const mergeCarts = variables => {
@@ -101,6 +103,9 @@ export const getCustomerAddressBook = () => {
   return m2HttpGQL.request(GET_CUSTOMER_ADDRESSBOOK)
 }
 
-export const deleteCustomerAddress = variables => {
-  return m2HttpGQL.request(DELETE_CUSTOMER_ADDRESS, variables)
+export const getCategoriesShop = async () => {
+  const resp = await axios.post(uriM2, {
+    query: CATEGORIES_OF_MENU_SHOP,
+  })
+  return resp
 }

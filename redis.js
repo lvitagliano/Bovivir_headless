@@ -27,7 +27,6 @@ const client = redis
 const setState = (key, state) => {
   return new Promise((resolve, reject) => {
     client.set(key, state, (err, reply) => {
-      console.log(err, reply)
       if (err) reject(err)
       resolve(reply)
     })

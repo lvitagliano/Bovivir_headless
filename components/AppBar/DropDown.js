@@ -19,6 +19,8 @@ const DropDown = ({ items, idx }) => {
       dispatch(setWordPressURL(item.wplink))
     } else if (item.href && item.as) {
       router.push(item.href, item.as)
+    } else if (item.target) {
+      window.open(item.href, item.target)
     }
   }
 
@@ -32,41 +34,44 @@ const DropDown = ({ items, idx }) => {
 
   return (
     <ul ref={setRef} className={`sub-menu ${!visRight ? 'display-left' : ''}`}>
-      {items.map((item, i) => (
-        <li key={uuid()}>
-          {!item.items && (
-            <a onClick={e => handleClick(e, item)}>
-              {visRight ? (
-                <div style={{ marginRight: '10px' }}>{item.text}</div>
-              ) : (
-                <div style={{ marginRight: '10px', textAlign: 'right' }}>{item.text}</div>
-              )}
-            </a>
-          )}
-          {item.items && (
-            <>
-              {visRight ? (
-                <a
-                  style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}
-                >
+      {items.map((item, i) => {
+        return (
+          < li key={uuid()} >
+            {!item.items && (
+              <a onClick={e => handleClick(e, item)}>
+                {visRight ? (
                   <div style={{ marginRight: '10px' }}>{item.text}</div>
-                  <ArrowRightIcon />
-                </a>
-              ) : (
-                <a
-                  style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}
-                >
-                  <ArrowLeftIcon />
+                ) : (
                   <div style={{ marginRight: '10px', textAlign: 'right' }}>{item.text}</div>
-                </a>
-              )}
-              <input type="checkbox" id="sm" />
-              <DropDown items={item.items} index={idx * 100} />
-            </>
-          )}
-        </li>
-      ))}
-    </ul>
+                )}
+              </a>
+            )}
+            {item.items && (
+              <>
+                {visRight ? (
+                  <a
+                    style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}
+                  >
+                    <div style={{ marginRight: '10px' }}>{item.text}</div>
+                    <ArrowRightIcon />
+                  </a>
+                ) : (
+                  <a
+                    style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}
+                  >
+                    <ArrowLeftIcon />
+                    <div style={{ marginRight: '10px', textAlign: 'right' }}>{item.text}</div>
+                  </a>
+                )}
+                <input type="checkbox" id="sm" />
+                <DropDown items={item.items} index={idx * 100} />
+              </>
+            )}
+          </li>
+        )
+      })
+      }
+    </ul >
   )
 }
 

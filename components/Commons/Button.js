@@ -1,13 +1,26 @@
 import React from 'react'
 import { CustomButton } from './styles'
-import Icon from '@material-ui/core/Icon'
+import { Icon, CircularProgress } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
 
-const Button = ({ variant, text, icon, ...props }) => {
+const useStyles = makeStyles(theme => ({
+  buttonProgress: {
+    color: '#762057',
+    position: 'absolute',
+  },
+}))
+
+const Button = ({ variant, text, icon, loading, disabled, ...props }) => {
+  const classes = useStyles()
+
   return (
-    <CustomButton {...props} className={variant}>
-      {icon ? <Icon>{icon}</Icon> : null}
-      <p style={{ textTransform: 'uppercase', margin: 0 }}>{text}</p>
-    </CustomButton>
+    <>
+      <CustomButton {...props} className={variant} disabled={loading || disabled}>
+        {icon ? <Icon>{icon}</Icon> : null}
+        <p style={{ textTransform: 'uppercase' }}>{text}</p>
+        {loading && <CircularProgress size={24} className={classes.buttonProgress} />}
+      </CustomButton>
+    </>
   )
 }
 

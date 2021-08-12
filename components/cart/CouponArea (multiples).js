@@ -63,7 +63,7 @@ const CouponArea = () => {
       </div>
     )
   }
-  console.log('COUPONS', applied_coupons)
+
   return (
     <>
       {items.length === 0 ? null : (
@@ -84,8 +84,8 @@ const CouponArea = () => {
             onChange={e => setCoupon(e.target.value)}
           ></InputForm>
           <div>
-            {applied_coupons?.map(c => (
-              <div className={classes.chip}>
+            {applied_coupons?.map((c, i) => (
+              <div key={i} className={classes.chip}>
                 <Chip label={c.code} color="primary" />
               </div>
             ))}

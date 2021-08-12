@@ -3,6 +3,37 @@ export const ruleReq = {
     required: value => (value && value.trim().length > 0) || 'Campo Requerido',
   },
 }
+export const ruleReqUndefined = {
+  validate: {
+    required: value => value !== 'undefined' || 'Campo Requerido',
+  },
+}
+
+export const ruleReqDatePicker = {
+  validate: {
+    required: value => value !== 'Invalid Date' || 'Campo Requerido',
+  },
+}
+
+export const ruleNumberAndString = (isRequired, min = 0, max = 50) => {
+  return {
+    validate: {
+      required: value => isRequired && ((value && value.trim().length > 0) || 'Campo Requerido'),
+    },
+    maxLength: {
+      value: max,
+      message: `El campo no debe tener mas de ${max} caracteres.`,
+    },
+    minLength: {
+      value: min,
+      message: `El campo debe tener mas de ${min} caracteres.`,
+    },
+    pattern: {
+      value: /^[a-zA-Z0-9 _.-]*$/,
+      message: 'El campo solo debe contener letras o numeros',
+    },
+  }
+}
 
 export const ruleString = (max = 20) => {
   return {
@@ -20,7 +51,7 @@ export const ruleString = (max = 20) => {
   }
 }
 
-export const ruleNumber = (max = 5, min = 1) => {
+export const ruleNumber = (max = 5, min = 2) => {
   return {
     validate: {
       required: value => (value && value.trim().length > 0) || 'Campo Requerido',
@@ -49,7 +80,7 @@ export const ruleEmail = {
     message: 'El campo no debe tener mas de 50 caracteres.',
   },
   pattern: {
-    value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+    value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     message: 'Ingrese un email válido',
   },
 }
@@ -87,20 +118,13 @@ export const rulePassword = {
   validate: {
     required: value => (value && value.trim().length > 0) || 'Campo Requerido',
   },
-  maxLength: {
-    value: 20,
-    message: 'El campo no debe tener mas de 20 caracteres.',
-  },
-  minLength: {
-    value: 8,
-    message: 'El campo debe tener mas de 8 caracteres.',
-  },
-  pattern: {
-    // value: /^.*(?=.{8,20})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
-    value: /^.*(?=.{8,20})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
-    message:
-      'El Password debe ser una combinación de una minúscula, una mayúscula, un caracter especial, un número y una longitud entre 8 y 20 caracteres',
-  },
+}
+export const rulePasswordConfirm = password => {
+  return {
+    validate: {
+      required: value => value === password || 'Las constraseñas no coinciden',
+    },
+  }
 }
 
 const validateCuit = cuit => {
@@ -137,4 +161,40 @@ const validateCuit = cuit => {
   const validCheckDigits = ['20', '23', '27', '30', '33']
 
   return validCheckDigits.indexOf(cuit.substr(0, 2)) !== -1
+}
+
+export const ruleApartm = {
+  validate: {
+    required: value => (value && value.trim().length > 0) || 'Campo Requerido',
+  },
+  maxLength: {
+    value: 3,
+    message: 'El campo no debe tener mas de 3 caracteres.',
+  },
+  pattern: {
+    value: /^[a-zA-Z0-9]+$/,
+    message: 'El campo solo debe contener numeros o letras',
+  },
+}
+
+export const ruleNumberNoRequired = max => ({
+  maxLength: {
+    value: max,
+    message: `El campo no debe tener mas de ${max} caracteres.`,
+  },
+  pattern: {
+    value: /^\d+$/,
+    message: 'El campo solo debe contener números',
+  },
+})
+
+export const ruleApartmNoRequired = {
+  maxLength: {
+    value: 3,
+    message: 'El campo no debe tener mas de 3 caracteres.',
+  },
+  pattern: {
+    value: /^[a-zA-Z0-9]+$/,
+    message: 'El campo solo debe contener numeros o letras',
+  },
 }

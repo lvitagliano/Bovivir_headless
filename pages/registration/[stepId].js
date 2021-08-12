@@ -52,7 +52,7 @@ const Registration = () => {
                 steps.id <= FORMSTEP.length && <Button disabled={Object.keys(errors).length} style={{display:'flex', margin:'30px auto'}}>
                     {Object.keys(errors).length ?
                         <div>Continuar</div>:
-                        <div ><input type="submit" style={{display: "none"}} /> Continuar</div>
+                        <div ><input type="submit" style={{display: "none"}} /> Continuasr</div>
                     }               
                 </Button>
             }

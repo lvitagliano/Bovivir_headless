@@ -1,9 +1,9 @@
 import React from 'react'
 import SearchDesktop from './SearchDesktop'
 import SearchMobile from './SearchMobile'
-import { useMediaQuery } from '@material-ui/core'
 import { useTheme } from '@material-ui/core/styles'
 import Spacer from 'react-storefront/Spacer'
+import { useMediaQuery } from '@material-ui/core'
 import { useAmp } from 'next/amp'
 
 function Search() {
@@ -13,9 +13,14 @@ function Search() {
 
   return (
     <>
-      {!isDesktop && <SearchMobile />}
-      <Spacer />
-      {isDesktop && <SearchDesktop />}
+      {!isDesktop ? (
+        <SearchMobile />
+      ) : (
+        <>
+          <Spacer />
+          <SearchDesktop />
+        </>
+      )}
     </>
   )
 }

@@ -13,6 +13,7 @@ import { SubTitle, Title2, Text1 } from '../utils/commonStyles'
 import Button from '../../Commons/Button'
 import { useMediaQuery } from '@material-ui/core'
 import { useTheme } from '@material-ui/core/styles'
+import { AUTOGESTION_DEV } from '../../../constants/url'
 
 const BigBanner = ({ bannerinfo, ...props }) => {
   const theme = useTheme()
@@ -20,7 +21,13 @@ const BigBanner = ({ bannerinfo, ...props }) => {
 
   return (
     <BigBannerContainer>
-      <ImageContainer image={bannerinfo.imageBigbanner.sourceUrl} />
+      <ImageContainer
+        image={
+          isDesktop
+            ? bannerinfo.imageBigbanner.sourceUrl
+            : 'https://qa.bonvivir.com/wp-content/uploads/2021/07/bonvivir_separtedelclub.jpg'
+        }
+      />
       <InfoContainer infoHeight={'50em'}>
         <SubTitle color={isDesktop ? '#fff' : '#762057'}>{bannerinfo.titleBigbanner}</SubTitle>
         <Title2 text={bannerinfo.subtitleBigbanner} color={isDesktop ? '#fff' : '#333'} />
@@ -39,10 +46,14 @@ const BigBanner = ({ bannerinfo, ...props }) => {
         ) : null}
         <ButtonContainer>
           {bannerinfo.button1Bigbanner ? (
-            <Button text={bannerinfo.button1Bigbanner.textButton1Bigbanner} />
+            <a href="club/queeselclub" style={{ textDecoration: 'none' }}>
+              <Button text={bannerinfo.button1Bigbanner.textButton1Bigbanner} />
+            </a>
           ) : null}
           {bannerinfo.button2Bigbanner ? (
-            <Button text={bannerinfo.button2Bigbanner.textButton2Bigbanner} />
+            <a href={AUTOGESTION_DEV} style={{ textDecoration: 'none' }}>
+              <Button text={bannerinfo.button2Bigbanner.textButton2Bigbanner} />
+            </a>
           ) : null}
         </ButtonContainer>
       </InfoContainer>

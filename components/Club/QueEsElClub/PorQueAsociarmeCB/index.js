@@ -1,5 +1,5 @@
 import { BannerContainer, Container1, Container2 } from './style'
-import { Title2, Text2, Text4, SubTitle3 } from '../../../Home/utils/commonStyles'
+import { Title2, Text2, Text4, SubTitle5 } from '../../../Home/utils/commonStyles'
 
 export default function PorQueAsociarmeCB({ data, ...props }) {
   return (
@@ -9,10 +9,10 @@ export default function PorQueAsociarmeCB({ data, ...props }) {
 
       <Container1>
         {data.items.map((item, i) => (
-          <Container2>
-            <img src={`/${item.img}`} alt=" " />
-            <SubTitle3>{item.subtitle}</SubTitle3>
-            <Text4>{item.text}</Text4>
+          <Container2 key={i}>
+            <img src={`/${item.img}`} alt=" " style={{width: '10em'}}/>
+            <SubTitle5 color='#762057'>{item.subtitle}</SubTitle5>
+            <Text4 color='#888'>{item.text}</Text4>
           </Container2>
         ))}
       </Container1>

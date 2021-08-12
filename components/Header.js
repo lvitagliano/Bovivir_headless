@@ -1,21 +1,29 @@
-import React, { useState, useCallback, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import React, { useState, useCallback, useContext, useEffect } from 'react'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
 import AppBar from 'react-storefront/AppBar'
-import CartButton from 'react-storefront/CartButton'
 import Search from './search/Search'
 import { Container } from '@material-ui/core'
-import Popper from '@material-ui/core/Popper'
 import Menu from 'react-storefront/menu/Menu'
 import MenuButton from 'react-storefront/menu/MenuButton'
-import Link from 'react-storefront/link/Link'
 import LoginIcon from './Login/LoginIcon'
 import { useDispatch, useSelector } from 'react-redux'
 import { createEmptyGuestCart } from '../store/actions/m2Action'
 import ScTheme from '../Styles/themes/main'
-import PopubShoppingcart from './PopubShoppingcart/PopubShoppingcart'
+import Link from 'next/link'
+import { Context } from '../services/Client/context/Context'
+import CartPopper from '../components/CartPopper'
+import { getCustomAttributes } from '../services/Client/GraphQl/m2GQL'
+import { useMediaQuery } from '@material-ui/core'
+import { useAmp } from 'next/amp'
+import { updateCustomerEmailAuth0Client } from '../services/Client/auth0api'
+import ChangePasswordTooWeak from './Login/changePasswordTooWeak'
 
 const useStyles = makeStyles(theme => ({
   title: {},
+  badge: {
+    color: 'grey',
+  },
+
   root: {
     flexGrow: 1,
   },
@@ -50,61 +58,75 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
-
-    [theme.breakpoints.down('xs')]: {
-      padding: 5,
+    '& > *': {
+      margin: '8px 6px',
     },
-  },
-  popperStyle: {
-    zIndex: '10',
-    background: '#fff',
-    width: '30%',
-    margin: '10px 30px 0 0',
-    outline: '1px solid #cacaca',
+    [theme.breakpoints.down('xs')]: {
+      padding: 1,
+    },
   },
 }))
 
 export default function Header({ menu, persistState, ...props }) {
   const classes = useStyles()
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [anchorEl, setAnchorEl] = useState(null)
-  const handleMenuClose = useCallback(() => setMenuOpen(false), [])
-  const handleMenuButtonClick = useCallback(() => setMenuOpen(menuOpen => !menuOpen), [])
-  const cart = useSelector(state => state.m2.cart)
-  const [itemCount, setItemCount] = useState(0)
-  const { isLogedInM2 } = useSelector(store => store.user)
-  const dispatch = useDispatch()
-  const open = Boolean(anchorEl)
-  const id = open ? 'shopping-cart' : undefined
+  const theme = useTheme()
+  const amp = useAmp()
+  const isDesktop = useMediaQuery(theme.breakpoints.up('sm')) && !amp
 
-  useEffect(() => {
-    setItemCount(persistState?.m2?.cart?.items.lenght || cart.items.length)
-  }, [cart])
+  const [menuOpen, setMenuOpen] = useState(false)
+  const handleMenuClose = useCallback(() => setMenuOpen(false), [])
+  const cart = useSelector(state => state.m2.cart)
+  const { isLogedInM2, auth0DataLogIn } = useSelector(store => store.user)
+  const dispatch = useDispatch()
+
+  const { handleClickClose } = useContext(Context)
 
   useEffect(() => {
     if (!isLogedInM2 && !persistState?.m2?.cart?.id) dispatch(createEmptyGuestCart())
   }, [persistState, isLogedInM2])
 
-  const handleClick = (event) => {
-    setAnchorEl(anchorEl ? null : event.currentTarget)
+  useEffect(() => {}, [menu])
+
+  const handleClick = () => {
+    handleClickClose()
+    setMenuOpen(menuOpen => !menuOpen)
   }
 
   return (
     <>
-      <AppBar>
+      <AppBar variant="fixed">
         <Container maxWidth="lg" className={classes.container}>
-          <Link href="/">
-            <a>
-              <img src="./images/logo_bonvivir.svg" alt="logo" style={{ width: 120, height: 48 }} />
-            </a>
-          </Link>
-          <Search />
-          <span onClick={handleClick}><CartButton href=" " quantity={itemCount ? `${itemCount}` : null}  aria-describedby={id}/></span>
-          <Popper id={id} open={open} anchorEl={anchorEl} className={classes.popperStyle} >
-              <PopubShoppingcart/>
-          </Popper>
-          <LoginIcon />
-          <MenuButton open={menuOpen} onClick={handleMenuButtonClick} />
+          {isDesktop ? (
+            <>
+              <Link href="/">
+                <a onClick={() => handleClickClose()}>
+                  <img
+                    src="./images/logo_bonvivir.svg"
+                    alt="logo"
+                    style={{ width: 120, height: 48 }}
+                  />
+                </a>
+              </Link>
+              <Search />
+            </>
+          ) : (
+            <>
+              <Search />
+              <Link href="/">
+                <a onClick={() => handleClickClose()}>
+                  <img
+                    src="./images/logo_bonvivir.svg"
+                    alt="logo"
+                    style={{ width: 120, height: 48 }}
+                  />
+                </a>
+              </Link>
+            </>
+          )}
+          <CartPopper persistState={persistState} />
+          <LoginIcon handleClickClose={handleClickClose} />
+          <ChangePasswordTooWeak />
+          <MenuButton open={menuOpen} onClick={() => handleClick()} />
         </Container>
       </AppBar>
       <Menu

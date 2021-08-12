@@ -1,62 +1,5 @@
 import { gql } from 'graphql-request'
 
-const items = `
-items{
-  id,
-  prices{
-    discounts{
-      amount{value}
-      label
-    },
-    price{value}
-    row_total{value}
-    row_total_including_tax{value}
-    total_item_discount{value}
-  }
-  quantity
-  product {
-    id
-    name
-    sku
-    price_range {
-      maximum_price {
-        final_price {
-          currency,
-          value
-        },
-        discount{
-          amount_off,
-          percent_off
-        },
-        fixed_product_taxes{
-          amount {
-            currency,
-            value
-          }, 
-          label
-        }
-        regular_price{
-          currency,
-          value
-        }
-      }
-    }
-    image {
-      label
-      url
-    },
-    media_gallery{
-      label
-      url
-    },
-    thumbnail {
-      label
-      url
-    }
-  }
-}
-`
-
 const GET_COUNTRIES = gql`
   query getProductById {
     products(filter: { category_id: { eq: "7" } }) {
@@ -80,40 +23,110 @@ const GET_CATEGORIES = gql`
     }
   }
 `
-
+const cart = `
+id
+total_quantity
+applied_coupons {
+  code
+}
+prices {
+  discounts {
+    amount {
+      currency
+      value
+    }
+    label
+  }
+  grand_total {
+    currency
+    value
+  }
+  subtotal_excluding_tax {
+    currency
+    value
+  }
+  subtotal_including_tax {
+    currency
+    value
+  }
+  subtotal_with_discount_excluding_tax {
+    currency
+    value
+  }
+}
+items {
+  id
+  prices {
+    discounts {
+      amount {
+        value
+      }
+      label
+    }
+    price {
+      value
+    }
+    row_total {
+      value
+    }
+    row_total_including_tax {
+      value
+    }
+    total_item_discount {
+      value
+    }
+  }
+  quantity
+  product {
+    id
+    new_from_date
+    new_to_date
+    only_x_left_in_stock
+    envio_gratis
+    dos_por_uno
+    special_date
+    descuento_socios
+    stock_status
+    qty
+    sku
+    url_key
+    name
+    price_range {
+      maximum_price {
+        final_price {
+          value
+        }
+        regular_price {
+          value
+        }
+      }
+    }
+    image {
+      label
+      url
+    }
+    media_gallery {
+      label
+      url
+    }
+    thumbnail {
+      label
+      url
+    }
+  }
+}
+`
 const GET_CUSTOMER_CART = gql`
 query{
   customerCart{
-    id
-    applied_coupons{
-      code
-    }
-    prices {
-      discounts{
-        amount{
-          currency
-          value
-        }
-        label
-      }
-      grand_total {
-         currency
-          value
-      }
-      subtotal_excluding_tax {
-         currency
-          value
-      }
-      subtotal_including_tax {
-         currency
-          value
-      }
-      subtotal_with_discount_excluding_tax {
-         currency
-          value
-      } 
-    }
-    ${items}
+    ${cart}
+  }
+}
+`
+const GET_GUEST_CART = gql`
+query cart($cart_id: String!){
+  cart(cart_id: $cart_id){
+    ${cart}
   }
 }
 `
@@ -132,61 +145,21 @@ const GET_CUSTOMER_ORDERS = gql`
   }
 `
 
-const simpleProduct = `
-    id,
+const simpleProductForSearch = gql`
+    id
+    name
+    sku
+    url_key
     image {
       label
       url
-    },
-    name,
-    thumbnail { url }
-    description {
-      html
-    },
-    sku,
-    media_gallery {
-      label
-      url
-    },
-    only_x_left_in_stock,
-    stock_status,
-    short_description{html},
-    vino_cepa,
-    vino_bodega,
-    vino_variedad,
-    vino_seleccion,
-    price_range {
-      maximum_price {
-        final_price {
-          currency,
-          value
-        },
-        discount{
-          amount_off
-        },
-        fixed_product_taxes{
-          amount {
-            currency,
-            value
-          }, 
-          label
-        }
-        regular_price{
-          currency,
-          value
-        }
-      }
     }
 `
-
 const SEARCH_PRODUCTS = gql`
   query searchProducts($filter: String!) {
     products(search: $filter) {
       items {
-        ${simpleProduct}
-        related_products {
-          ${simpleProduct}
-        }
+        ${simpleProductForSearch}
       }
     }
   }
@@ -200,6 +173,7 @@ const GET_CUSTOMER_WISHLIST = gql`
         items {
           id
           product {
+            url_key
             descuento_socios
             dos_por_uno
             envio_gratis
@@ -249,15 +223,47 @@ const GET_CUSTOMER_ADDRESSBOOK = gql`
         id
         lastname
         postcode
-        region {
-          region
-          region_code
-        }
         street
         telephone
       }
     }
   }
+`
+
+const GET_CUSTOM_ATTRIBUTES = gql`
+  {
+    customAttributeMetadata(
+      attributes: [
+        { attribute_code: "cantidad", entity_type: "catalog_product" }
+        { attribute_code: "vino_bodega", entity_type: "catalog_product" }
+        { attribute_code: "vino_cepa", entity_type: "catalog_product" }
+        { attribute_code: "vino_seleccion", entity_type: "catalog_product" }
+        { attribute_code: "vino_variedad", entity_type: "catalog_product" }
+      ]
+    ) {
+      items {
+        attribute_code
+        attribute_type
+        entity_type
+        input_type
+        attribute_options {
+          value
+          label
+        }
+      }
+    }
+  }
+`
+// Categorias para el submenu de tienda
+const CATEGORIES_OF_MENU_SHOP = `
+query{
+  categoryList(filters:{}){
+    id
+    name
+		include_in_menu
+    url_path
+  }
+}
 `
 
 export {
@@ -268,4 +274,7 @@ export {
   SEARCH_PRODUCTS,
   GET_CUSTOMER_WISHLIST,
   GET_CUSTOMER_ADDRESSBOOK,
+  GET_CUSTOM_ATTRIBUTES,
+  GET_GUEST_CART,
+  CATEGORIES_OF_MENU_SHOP,
 }

@@ -14,20 +14,26 @@ const BannerContainer = styled.div`
     }
 `
 const Container1 = styled.div`
-    width: 70em;
     margin-top: 3em;
 
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     
+    @media ${device.minMobileL} { 
+        flex-direction: row;
+        width: 70em;
+
+    }
 `
 const Container2 = styled.div`
     width: 20em;
-    height: 30em;
+    height: 20em;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 `
 
 export {

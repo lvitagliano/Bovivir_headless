@@ -16,9 +16,6 @@ const initialState = {
   },
   //Datos de facturacion
   step2: {
-    region: '',
-    region_id: '',
-    region_code: '',
     country_id: '',
     street: '',
     telephone: '',
@@ -31,9 +28,6 @@ const initialState = {
     save_in_address_book: '',
   },
   step3: {
-    region: '',
-    region_id: '',
-    region_code: '',
     country_id: '',
     street: '',
     telephone: '',
@@ -53,25 +47,35 @@ const initialState = {
     items: [],
   },
   step5: {},
+  addressView: {},
   customerData: {},
   customerWishList: {},
   customerBoughtList: {},
+  customerAddresses: {},
   paymentMethodData: {},
   paymentURL: '',
   currentStep: '',
   loading: true,
   formError: {},
   error: null,
+  success: null,
+  pointHOP: [],
+  selectedShipping: {},
+  openTooWeak: false,
 }
 
 const m2Reducer = (state = initialState, { type, payload }) => {
   switch (type) {
+    case types.SET_CLEAR_ALERTS:
+      return set_clear_alerts(state, payload)
     case types.SET_M2_STEP:
       return set_m2_step(state, payload)
     case types.SET_REQUEST:
       return set_request(state, payload)
     case types.SET_ERROR:
       return set_error(state, payload)
+    case types.SET_SUCCESS:
+      return set_success(state, payload)
     case types.SET_FORM_ERROR:
       return set_form_error(state, payload)
     case types.SET_CART_SUCCESS:
@@ -94,26 +98,36 @@ const m2Reducer = (state = initialState, { type, payload }) => {
       return set_payment_method_ops_success(state, payload)
     case types.SET_PAYMENT_URL_SUCCESS:
       return set_payment_url_success(state, payload)
-
     case types.SET_SHIPPING_ADDRESS:
       return set_shipping_address(state, payload)
+    case types.SET_SHIPPING_VIEW_ADDRESS:
+      return set_shipping_view_address(state, payload)
     case types.SET_BILLING_ADDRESS:
       return set_billing_address(state, payload)
+    case types.SET_POINT_HOP:
+      return set_shipping_methods(state, payload)
     case types.SET_PAYMENT_METHOD:
       return set_payment_methods(state, payload)
-
     case types.SET_APPLIED_COUPONS:
       return set_applied_coupons(state, payload)
+    case types.SET_SELECTED_SHIPPING_METHOD:
+      return set_selected_shipping_method(state, payload)
     case types.LOGOUT:
       return initialState
+    case types.OPENTOOWEAK:
+      return set_opentooweak(state, payload)
     default:
       return state
   }
 }
 
+const set_opentooweak = (state, data) => ({ ...state, openTooWeak: data })
 const set_shipping_address = (state, data) => ({ ...state, step2: data })
+const set_shipping_view_address = (state, data) => ({ ...state, addressView: data })
 const set_billing_address = (state, data) => ({ ...state, step3: data })
+const set_shipping_methods = (state, data) => ({ ...state, step5: data })
 const set_payment_methods = (state, data) => ({ ...state, step4: data })
+const set_selected_shipping_method = (state, data) => ({ ...state, selectedShipping: data })
 
 const set_m2_step = (state, data) => {
   const step = data.step
@@ -122,60 +136,49 @@ const set_m2_step = (state, data) => {
   delete data['currentStep']
   return {
     ...state,
-    [step]: data,
     currentStep,
     loading: false,
     error: null,
   }
 }
-
 const set_request = (state, data) => ({ ...state, loading: true })
-
 const set_error = (state, data) => ({ ...state, loading: false, error: normalizeError(data) })
-
+const set_success = (state, data) => ({ ...state, loading: false, success: normalizeError(data) })
 const set_form_error = (state, data) => ({ ...state, formError: data })
-
 const set_cart_success = (state, data) => {
   const clonedCart = { ...state.cart, quote_id: data }
   return { ...state, cart: clonedCart, loading: false, error: null }
 }
-
 const set_empty_cart_success = (state, data) => {
   return { ...state, cart: data, loading: false, error: null }
 }
-
 const set_item_success = (state, data) => {
   const clonedCart = { ...state.cart, items: [...state.cart.items, data] }
   return { ...state, cart: clonedCart, loading: false, error: null }
 }
-
 const delete_item_success = (state, data) => {
   const clonedCart = { ...state.cart, items: items.reduce(item => data.id !== item.id) }
   return { ...state, cart: clonedCart, loading: false, error: null }
 }
-
 const set_customer_data_success = (state, data) => {
   return { ...state, customerData: data, loading: false, error: null }
 }
-
 const set_customer_wishlist_success = (state, data) => {
   return { ...state, customerWishList: data, loading: false, error: null }
 }
-
 const set_customer_order_success = (state, data) => {
   return { ...state, customerBoughtList: data.customerOrders, loading: false, error: null }
 }
-
 const set_cart_and_items_success = (state, data) => {
   return { ...state, cart: data, loading: false, error: null }
 }
-
 const set_payment_method_ops_success = (state, data) => {
   return { ...state, paymentMethodData: data, loading: false, error: null }
 }
-
 const set_payment_url_success = (state, data) => {
   return { ...state, paymentURL: data[1], loading: false, error: null }
 }
+
+const set_clear_alerts = (state, data) => ({ ...state, error: null, success: null })
 
 export { m2Reducer }

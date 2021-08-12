@@ -1,210 +1,98 @@
+const AddresBox = props => {
+  const { title, data } = props
+  const multiLabelsContainerStyle = {
+    margin: '1em 0 5px',
+    display: 'flex',
+    justifyContent: 'space-between',
+  }
+
+  const labelsContainerStyle = { margin: '1em 0 5px' }
+
+  const boxStyle = {
+    width: '50%',
+  }
+
+  const labelStyle = {
+    fontWeight: 'bold',
+    fontSize: 'smaller',
+    opacity: 0.7,
+  }
+
+  const dataStyle = {
+    fontSize: 'medium',
+  }
+
+  const boxInfoStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '1rem',
+  }
+
+  return (
+    <div style={boxStyle}>
+      <h5 style={{ paddingLeft: '15px' }}>{title}</h5>
+      {data ? (
+        <div style={boxInfoStyle}>
+          <div style={multiLabelsContainerStyle}>
+            <div style={{ flex: 1 }}>
+              <label style={labelStyle}>Nombre: </label>
+              <br />
+              <b style={dataStyle}>{data.firstname}</b>
+            </div>
+            <div style={{ flex: 1 }}>
+              <label style={labelStyle}>Apellido: </label>
+              <br />
+              <b style={dataStyle}>{data.lastname}</b>
+            </div>
+          </div>
+          <div style={labelsContainerStyle}>
+            <label style={labelStyle}>Dirección: </label>
+            <br />
+
+            <b style={dataStyle}>{data.street?.join(' ')}</b>
+          </div>
+          <div style={labelsContainerStyle}>
+            <label style={labelStyle}>Localidad: </label>
+            <br />
+
+            <b style={dataStyle}>{data.city}</b>
+          </div>
+          <div style={labelsContainerStyle}>
+            <label style={labelStyle}>Provincia: </label>
+            <br />
+
+            <b style={dataStyle}>{data.region?.region}</b>
+          </div>
+          <div style={multiLabelsContainerStyle}>
+            <div style={{ flex: 1 }}>
+              <label style={labelStyle}>C.P.: </label>
+              <br />
+
+              <b style={dataStyle}>{data.postcode}</b>
+            </div>
+            <div style={{ flex: 1 }}>
+              <label style={labelStyle}>Teléfono: </label>
+              <br />
+
+              <b style={dataStyle}>{data.telephone}</b>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div>No hay dirección por defecto</div>
+      )}
+    </div>
+  )
+}
+
 export default function DefaultAddress({ defaultShipping, defaultBilling }) {
   return (
     <>
       <h4>Direcciones por defecto</h4>
-      <hr />
-      <div style={{ display: 'flex', marginLeft: '1em' }}>
-        <div style={{ width: '50%' }}>
-          <h5>Dirección de facturacion por defecto</h5>
-          {defaultBilling ? (
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-              }}
-            >
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  paddingRight: '5em',
-                  margin: '1em 0',
-                }}
-              >
-                <label>Nombre: </label>
-                <b>{defaultBilling.firstname}</b>
-              </div>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  paddingRight: '5em',
-                  margin: '1em 0',
-                }}
-              >
-                <label>Apellido: </label>
-                <b>{defaultBilling.lastname}</b>
-              </div>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  paddingRight: '5em',
-                  margin: '1em 0',
-                  textAlign: 'end',
-                }}
-              >
-                <label>Dirección: </label>
-                <b>{defaultBilling.street.join(' ')}</b>
-              </div>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  paddingRight: '5em',
-                  margin: '1em 0',
-                }}
-              >
-                <label>Localidad: </label>
-                <b>{defaultBilling.city}</b>
-              </div>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  paddingRight: '5em',
-                  margin: '1em 0',
-                }}
-              >
-                <label>Provincia: </label>
-                <b>{defaultBilling.region.region}</b>
-              </div>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  paddingRight: '5em',
-                  margin: '1em 0',
-                }}
-              >
-                <label>Codigo Postal: </label>
-                <b>{defaultBilling.postcode}</b>
-              </div>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  width: '100%',
-                  paddingRight: '5em',
-                  margin: '1em 0',
-                }}
-              >
-                <label>Teléfono: </label>
-                <b>{defaultBilling.telephone}</b>
-              </div>
-            </div>
-          ) : (
-            <div>No hay direccion por defecto</div>
-          )}
-        </div>
-
-        <div style={{ width: '50%' }}>
-          <h5>Dirección de entrega por defecto</h5>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {defaultShipping ? (
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    paddingRight: '5em',
-                    margin: '1em 0',
-                  }}
-                >
-                  <label>Nombre: </label>
-                  <b>{defaultShipping.firstname}</b>
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    paddingRight: '5em',
-                    margin: '1em 0',
-                  }}
-                >
-                  <label>Apellido: </label>
-                  <b>{defaultShipping.lastname}</b>
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    paddingRight: '5em',
-                    margin: '1em 0',
-                    textAlign: 'end',
-                  }}
-                >
-                  <label>Dirección: </label>
-                  <b>{defaultShipping.street.join(' ')}</b>
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    paddingRight: '5em',
-                    margin: '1em 0',
-                  }}
-                >
-                  <label>Localidad: </label>
-                  <b>{defaultShipping.city}</b>
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    paddingRight: '5em',
-                    margin: '1em 0',
-                  }}
-                >
-                  <label>Provincia: </label>
-                  <b>{defaultShipping.region.region}</b>
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    paddingRight: '5em',
-                    margin: '1em 0',
-                  }}
-                >
-                  <label>Codigo Postal: </label>
-                  <b>{defaultShipping.postcode}</b>
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: '100%',
-                    paddingRight: '5em',
-                    margin: '1em 0',
-                  }}
-                >
-                  <label>Teléfono: </label>
-                  <b>{defaultShipping.telephone}</b>
-                </div>
-              </div>
-            ) : (
-              <div>No hay direccion por defecto</div>
-            )}
-          </div>
-        </div>
+      <div style={{ display: 'flex' }}>
+        <AddresBox title="Dirección de facturación por defecto" data={defaultBilling} />
+        <div style={{ width: '1px', backgroundColor: '#00000026' }} />
+        <AddresBox title="Dirección de entrega por defecto" data={defaultShipping} />
       </div>
     </>
   )

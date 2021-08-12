@@ -1,80 +1,96 @@
-import React, { memo, useCallback, useState } from 'react'
-import Link from 'react-storefront/link/Link'
+import React, { memo, useCallback, useState, useEffect, useContext } from 'react'
+import Link from 'next/link'
 import { Vbox } from 'react-storefront/Box'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
 import ForwardThumbnail from 'react-storefront/ForwardThumbnail'
 import Image from 'react-storefront/Image'
-import clsx from 'clsx'
 import Button from '../Commons/Button'
 import EllipsisText from '../../components/Commons/EllipsisText'
 import { useDispatch, useSelector } from 'react-redux'
-import { addItemToCart, updateItemsInCart } from '../../store/actions/m2Action'
-import { debounce } from '../utils/utils'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder'
-import { StyledCucarda, CustomCucarda } from './styles'
-import { setCustomerWishList } from '../../store/actions/m2Action'
+import { StyledCucarda } from './styles'
+import { setCustomerWishList, addItemToCart, updateItemsInCart } from '../../store/actions/m2Action'
+import { setLoginRequest } from '../../store/actions/userAction'
+import { Typography } from '@material-ui/core'
+import { Context } from '../../services/Client/context/Context'
+import moment from 'moment'
+import { CUCARDA_ULTIMOS_QTY_BELOW, STOCK_OPTIONS } from '../../constants/m2'
+import { Tooltip } from '@material-ui/core'
+import { useMediaQuery } from '@material-ui/core'
+import { useAmp } from 'next/amp'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    padding: `${theme.spacing(2)}px 0`,
-  },
-  thumbnail: {
-    marginBottom: theme.spacing(1),
+  prodContainer: {
+    backgroundColor: '#FFF',
+    borderRadius: '1px',
+    padding: '15px 10px 10px',
+    height: '30em',
+    width: '20em',
+    [theme.breakpoints.down('sm')]: {
+      height: '30em',
+      width: '12.2em',
+      marginRight: '1rem',
+      padding: '45px 10px',
+    },
   },
   ultimos: {
     position: 'absolute',
+    zIndex: 1,
     left: 0,
-    top: 0,
-    zIndex: 1,
-  },
-  envio: {
-    position: 'absolute',
-    left: 0,
-    top: '25px',
-    zIndex: 1,
-  },
-  cyberMonday: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    zIndex: 2,
-  },
-  nuevo: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    zIndex: 1,
-  },
-  dosxuno: {
-    position: 'absolute',
-    top: 20,
-    right: 0,
-    zIndex: 1,
-  },
-  discount: {
-    position: 'absolute',
-    textAlign: 'center',
-    fontSize: '0.8em',
-    bottom: 5,
-    right: 10,
-    zIndex: 1,
+    top: 10,
   },
   favourite: {
     position: 'absolute',
-    top: 0,
-    right: 10,
     zIndex: 1,
+    top: 10,
+    right: 20,
     cursor: 'pointer',
+    color: 'rgba(0, 0, 0, 0.6)',
+  },
+  envio: {
+    position: 'absolute',
+    zIndex: 1,
+    top: 35,
+    left: 0,
+  },
+  dosxuno: {
+    position: 'absolute',
+    zIndex: 1,
+    top: 40,
+    right: 10,
+  },
+  nuevo: {
+    position: 'absolute',
+    zIndex: 1,
+    top: 220,
+    left: 0,
+    width: '100%',
+  },
+  cyberMonday: {
+    position: 'absolute',
+    zIndex: 2,
+    top: 210,
+    left: 0,
+  },
+  discount: {
+    textAlign: 'center',
+    fontSize: '0.8em',
+    margin: '0 0 0 5px',
+    zIndex: 1,
+    [theme.breakpoints.down('sm')]: {
+      right: -3,
+      textAlign: 'right',
+    },
   },
   link: {
+    position: 'relative',
     textDecoration: 'none',
     color: 'inherit',
-    position: 'relative',
     cursor: 'pointer',
     minWidth: '180px',
     minHeight: '180px',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.down('sm')]: {
       minWidth: '210px',
       minHeight: '210px',
     },
@@ -95,105 +111,120 @@ const useStyles = makeStyles(theme => ({
     marginTop: '5px',
   },
   priceOfferGreen: {
-    position: 'relative',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     width: '100%',
     fontSize: '1.5em',
     fontWeight: '800',
     color: '#0f9c6c',
     textAlign: 'center',
     marginButton: '10px',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'start',
+    },
   },
   button: {
-    bottom: '0',
     display: 'flex',
-    position: 'absolute',
-    fontSize: '1.5em',
-    textAlign: 'center',
-    margin: '5px',
-    marginTop: '10px',
-    fontWeight: '800',
-  },
-  reviews: {
-    marginTop: '5px',
-  },
-  reviewCount: {
-    marginLeft: '2px',
+    justifyContent: 'center',
   },
   info: {
-    margin: '0',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: '9em',
-    marginBottom: '40px',
+    justifyContent: 'start',
+    height: '125px',
+    textAlign: 'center',
+    paddingTop: '7px',
+    [theme.breakpoints.down('sm')]: {
+      height: '165px',
+    },
   },
   subtitle: {
+    textTransform: 'uppercase',
     fontSize: '0.8em',
     textAlign: 'center',
-    fontColor: '#888',
+    color: '#767677',
     fontWeight: '800',
+    zIndex: 1,
   },
-  name: {
-    fontSize: '0.9',
-    textAlign: 'center',
-    maxHeight: '5em',
-    minHeight: '61px',
-    marginTop: '-1em',
-    marginButtom: '10px',
+  spamStyle: {
+    display: 'flex',
+    justifyContent: 'center',
   },
 }))
 
-function ProductItem({ product, index, classes, className }) {
-  classes = useStyles({ classes })
-  const dispatch = useDispatch()
-  const { customerWishList } = useSelector(state => state.m2)
-  const [favourite, setFavourite] = useState(false)
-  const items = useSelector(state => state.m2.cart.items)
+function ProductItem({ product, index, favouriteF }) {
+  // Instances
+  const priceObject = new Intl.NumberFormat('es-AR', {
+    currency: 'ARS',
+    style: 'currency',
+  })
 
-  const handleAddDebounced = useCallback(
-    debounce(() => {
-      addFn()
-    }, 750),
-    []
-  )
+  const classes = useStyles()
+  const dispatch = useDispatch()
+  const theme = useTheme()
+  const amp = useAmp()
+  const isDesktop = useMediaQuery(theme.breakpoints.up('sm')) && !amp
+
+  // Selectors
+  const { customerWishList } = useSelector(state => state.m2)
+  const items = useSelector(state => state.m2.cart.items)
+  const { isLogedInM2, isLogedInAuth0 } = useSelector(state => state.user)
+
+  // States
+  const [favourite, setFavourite] = useState(favouriteF)
+  const [loading, setLoading] = useState(false)
+
+  const { attributesMetadata, handleClickClose, open, setOpen } = useContext(Context)
+
+  const cantidadAttr = attributesMetadata?.filter(x => x.attribute_code === 'cantidad')[0]
+
+  useEffect(() => {
+    setFavourite(favouriteF)
+  }, [favouriteF])
 
   const handleFavourite = e => {
-    e.stopPropagation()
-    if (favourite) {
-      dispatch(
-        setCustomerWishList('REMOVE', {
-          wishlistId: customerWishList?.id,
-          wishlistItemsIds: [customerWishList?.items?.find(i => i.product.id === product.id).id],
-        })
-      )
+    e.preventDefault()
+    if (isLogedInM2 && isLogedInAuth0) {
+      if (favourite) {
+        dispatch(
+          setCustomerWishList('REMOVE', {
+            wishlistId: customerWishList?.id,
+            wishlistItemsIds: [customerWishList?.items?.find(i => i.product.id === product.id).id],
+          })
+        )
+      } else {
+        dispatch(
+          setCustomerWishList('ADD', {
+            wishlistId: customerWishList?.id,
+            wishlistItems: [{ sku: product.sku, quantity: 1 }],
+          })
+        )
+      }
+      setFavourite(!favourite)
     } else {
-      dispatch(
-        setCustomerWishList('ADD', {
-          wishlistId: customerWishList?.id,
-          wishlistItems: [{ sku: product.sku, quantity: 1 }],
-        })
-      )
+      dispatch(setLoginRequest(true))
     }
-    setFavourite(!favourite)
   }
 
-  const cucardas = ['ultimos', 'envio', 'cyberMonday', 'nuevo', 'dosxuno']
+  const handleAdd = async () => {
+    setLoading(true)
 
-  const handleAdd = () => {
-    handleAddDebounced()
-  }
-
-  const addFn = () => {
-    let item = {
-      sku: product.sku,
-      quantity: 1,
+    const handleLoading = async () => {
+      let item = {
+        sku: product.sku,
+        quantity: 1,
+      }
+      if (isNew(item)) {
+        await dispatch(addItemToCart(item))
+      } else {
+        await updateCartItems(item)
+      }
     }
-    if (isNew(item)) {
-      dispatch(addItemToCart(item))
-    } else {
-      updateCartItems(item)
-    }
+    await handleLoading()
+    setOpen(true)
+    setLoading(false)
   }
 
   const isNew = item => {
@@ -201,39 +232,19 @@ function ProductItem({ product, index, classes, className }) {
     return found === undefined
   }
 
-  const updateCartItems = item => {
-    let newItems = items.map(it => {
-      if (it.product.sku === item.sku) {
-        return {
-          cart_item_id: it.id,
-          quantity: it.quantity + 1,
+  const updateCartItems = async item => {
+    let newItems = items.filter(it => it.product.sku === item.sku)
+    let addItem = newItems.length
+      ? {
+          id: newItems[0].id,
+          quantity: newItems[0].quantity + 1,
         }
-      } else {
-        return {
+      : {
           cart_item_id: it.id,
           quantity: it.quantity,
         }
-      }
-    })
-    dispatch(updateItemsInCart(newItems))
-  }
 
-  const Cucarda = ({ colour, text, height, width, borderLeft, ...props }) => {
-    return (
-      <div
-        style={{
-          backgroundColor: `${colour}`,
-          width: `${width}`,
-          height: `${height}`,
-          fontSize: '0.9em',
-          color: 'white',
-          textAlign: 'center',
-          borderLeft: `${borderLeft}`,
-        }}
-      >
-        {text}
-      </div>
-    )
+    await dispatch(updateItemsInCart(addItem))
   }
 
   const DosPorUno = () => (
@@ -264,131 +275,172 @@ function ProductItem({ product, index, classes, className }) {
   )
 
   return (
-    <div id={`item-${index}`} className={clsx(className, classes.root)}>
+    <div
+      key={`item-${index}`}
+      id={`item-${index}`}
+      className={classes.prodContainer}
+      style={{ position: 'relative' }}
+    >
       <Vbox alignItems="center">
         <ForwardThumbnail>
           <Link
-            as={product.url}
-            href="/p/[productId]"
-            className={classes.link}
-            prefetch="visible"
-            pageData={{ product }}
+            as={`/${product.sku}${product.url || `/p/${product.url_key}.html`}`}
+            href={`/p/${product.sku}/${product.id}`}
           >
-            <div className={classes.thumbnail}>
-              {cucardas.includes('ultimos') ? (
-                <div className={classes.ultimos}>
-                  <StyledCucarda
-                    colour="#ff6e70"
-                    width="80px"
-                    height="20px"
-                    text="Ultimos"
-                    className="ultimos"
-                    position="absolute"
-                    left="-6px"
-                    top="-7px"
-                  />
+            <a>
+              <>
+                {product.qty <= CUCARDA_ULTIMOS_QTY_BELOW && product.qty > 0 ? (
+                  <div className={classes.ultimos}>
+                    <StyledCucarda
+                      colour="#ff6e70"
+                      width="80px"
+                      height="20px"
+                      text="Últimos"
+                      style={{ paddingTop: '3px' }}
+                    />
+                  </div>
+                ) : null}
+                {product.envio_gratis ? (
+                  <div className={classes.envio}>
+                    <StyledCucarda
+                      colour="black"
+                      width="100px"
+                      height="40px"
+                      text="Envio gratis socios Bonvivir"
+                    />
+                  </div>
+                ) : null}
+                {false ? (
+                  <div className={classes.cyberMonday}>
+                    <StyledCucarda
+                      colour="rgba(0, 0, 100, 0.6)"
+                      width="80px"
+                      height="20"
+                      text="cyber Monday"
+                    />
+                  </div>
+                ) : null}
+                {product.new_from_date && product.new_to_date ? (
+                  moment().isBetween(
+                    moment(product.new_from_date),
+                    moment(product.new_to_date),
+                    'days',
+                    '[]'
+                  ) ? (
+                    <div className={classes.nuevo}>
+                      <StyledCucarda colour="rgba(0, 0, 0, 0.6)" height="20px" text="Nuevo" />
+                    </div>
+                  ) : null
+                ) : null}
+                {product.dos_por_uno ? (
+                  <div className={classes.dosxuno}>
+                    <StyledCucarda
+                      className="dosxuno"
+                      colour="green"
+                      width="70px"
+                      height="70px"
+                      text={<DosPorUno />}
+                    />
+                  </div>
+                ) : null}
+                <div className={classes.favourite} onClick={handleFavourite}>
+                  {favourite ? (
+                    <FavoriteIcon style={{ width: '25px', height: '25px' }} />
+                  ) : (
+                    <FavoriteBorderIcon style={{ width: '25px', height: '25px' }} />
+                  )}
                 </div>
-              ) : null}
-              {cucardas.includes('envio') ? (
-                <div className={classes.envio}>
-                  <StyledCucarda
-                    colour="black"
-                    width="100px"
-                    height="40px"
-                    text="Envio gratis socios Bonvivir"
-                    className="envio"
-                    position="absolute"
-                    left="-6px"
-                  />
-                </div>
-              ) : null}
-              {cucardas.includes('cyberMonday') ? (
-                <div className={classes.cyberMonday}>
-                  <Cucarda
-                    colour="rgba(0, 0, 100, 0.6)"
-                    width="80px"
-                    height="20"
-                    text="cyber Monday"
-                  />
-                </div>
-              ) : null}
-              {cucardas.includes('nuevo') ? (
-                <div className={classes.nuevo}>
-                  <Cucarda colour="rgba(0, 0, 0, 0.6)" width="210px" height="20px" text="Nuevo" />
-                </div>
-              ) : null}
-              {cucardas.includes('dosxuno') ? (
-                <div className={classes.dosxuno}>
-                  <StyledCucarda
-                    className="dosxuno"
-                    colour="green"
-                    width="70px"
-                    height="70px"
-                    text={<DosPorUno />}
-                  />
-                </div>
-              ) : null}
-              <div className={classes.favourite} onClick={handleFavourite}>
-                {favourite ? (
-                  <FavoriteIcon style={{ width: '20px', height: '20px' }} />
-                ) : (
-                  <FavoriteBorderIcon style={{ width: '20px', height: '20px' }} />
-                )}
-              </div>
-              <Image
-                src={product.thumbnail && product.thumbnail.src}
-                // src="/images/templateWine.png"
-                alt={product.thumbnail && product.thumbnail.alt}
-                optimize={{ maxWidth: 200 }}
-                lazy={index >= 4 && index < 20 ? 'ssr' : false}
-                aspectRatio={1}
-              />
-            </div>
+                <Image
+                  height={isDesktop ? '220px' : '150px'}
+                  width={isDesktop ? '220px' : '140px'}
+                  src={product.image.url}
+                  alt={product.thumbnail && product.thumbnail.alt}
+                />
+              </>
+            </a>
           </Link>
           <div className={classes.info}>
-            <div className={classes.subtitle}>3 BOTELLAS</div>
-            <div className={classes.name}>
-              <EllipsisText mytext={product.name} maxlimit={50}></EllipsisText>
+            <div className={classes.subtitle}>
+              {
+                cantidadAttr?.attribute_options.find(x => x.value === product?.cantidad?.toString())
+                  ?.label
+              }
             </div>
-            {product.discount !== '-0%' || true ? (
+            <EllipsisText
+              style={{ margin: '0' }}
+              mytext={product.name}
+              maxlimit={50}
+            ></EllipsisText>
+            {product?.price_range?.maximum_price?.discount?.percent_off > 0 ||
+            product?.price_range?.discount?.percent_off > 0 ? (
               <>
-                <div className={classes.priceOffer}>{product.regular_price}</div>
+                <div className={classes.priceOffer}>
+                  {priceObject.format(
+                    product?.price_range?.maximum_price?.regular_price.value ||
+                      product?.price_range?.regular_price.value
+                  )}
+                </div>
                 <div className={classes.priceOfferGreen}>
-                  {product.final_price}
+                  {priceObject.format(
+                    product?.price_range?.maximum_price?.final_price.value ||
+                      product?.price_range?.final_price.value
+                  )}
                   <div className={classes.discount}>
                     <StyledCucarda
                       className="oferta"
                       colour="#00bc8a"
                       width="40px"
-                      height="19px"
-                      text={product.discount}
+                      text={`-${Math.trunc(
+                        product?.price_range?.maximum_price?.discount?.percent_off
+                      ) || Math.trunc(product?.price_range?.discount?.percent_off)}%`}
                       borderLeft="100px"
+                      margin={'0 0 0 -7rem'}
                     />
                   </div>
                 </div>
               </>
             ) : (
-              <div className={classes.price}>{product.regular_price}</div>
+              <>
+                <Typography variant="h5">
+                  {priceObject.format(
+                    product.price_range?.maximum_price?.final_price.value ||
+                      product.price_range?.final_price.value
+                  )}
+                </Typography>
+              </>
             )}
-            <div className={classes.button}>
+          </div>
+          <div className={classes.button}>
+            {product.stock_status === STOCK_OPTIONS.OUT_OF_STOCK && product.qty === 0 ? (
+              <Tooltip title="Sin stock">
+                <span className={classes.spamStyle}>
+                  <Button
+                    margin="0"
+                    padding="0 30px"
+                    height="3.5em"
+                    width="70%"
+                    text="sin stock"
+                    disabled
+                  />
+                </span>
+              </Tooltip>
+            ) : (
               <Button
-                width="80%"
+                loading={loading}
+                margin="0"
+                padding="0 30px"
+                height="3.5em"
+                width="70%"
                 icon="add_shopping_cart"
                 text="agregar"
-                onClick={handleAdd}
-                style={{ margin: 'auto' }}
-              ></Button>
-            </div>
+                onClick={() => handleAdd()}
+              />
+            )}
           </div>
         </ForwardThumbnail>
       </Vbox>
     </div>
   )
-}
-
-ProductItem.defaultProps = {
-  colorSelector: true,
-  displayButton: true,
 }
 
 export default memo(ProductItem)

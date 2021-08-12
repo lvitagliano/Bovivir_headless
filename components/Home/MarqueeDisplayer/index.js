@@ -8,7 +8,6 @@ const MarqueeDisplayer = ({ items, arrows, stepper, autoPlay }) => {
   const [itemDim, setItemDim] = useState({ width: 0, height: 0 })
 
   useEffect(() => {
-    // console.log(refsArr[0].getBoundingClientRect())
     setItemDim({
       width: refsArr[0].getBoundingClientRect().width,
       height: refsArr[0].getBoundingClientRect().height,
@@ -20,10 +19,12 @@ const MarqueeDisplayer = ({ items, arrows, stepper, autoPlay }) => {
   }
 
   return (
-    <Marquee elemHeight={itemDim.height || 220}>
+    <Marquee>
       <MarqueeContent elemWidth={itemDim.width || 220} numElems={items.length}>
         {[...items, ...items].map((item, i) => (
-          <li ref={ref => setRef(ref, i)}>{item}</li>
+          <li key={i} ref={ref => setRef(ref, i)}>
+            {item}
+          </li>
         ))}
       </MarqueeContent>
     </Marquee>

@@ -1,83 +1,76 @@
-import React from 'react';
-import {Container,RowContainer,List,SocialNetwork,Wording} from "./styles";
-import {Facebook} from "@styled-icons/boxicons-logos/Facebook";
-import {Instagram} from "@styled-icons/boxicons-logos/Instagram";
-import {Youtube} from "@styled-icons/boxicons-logos/Youtube";
-import {Twitter} from "@styled-icons/boxicons-logos/Twitter";
+import React, { useEffect } from 'react'
+import { Container, Wording, ContainerContent } from './styles'
+import RegretButton from './RegretButton'
+import { MENU_FOOT_HELP } from '../../constants/menu'
+import Columns from './columns'
+import MediaColumn from './mediaColumn'
+import { useDispatch, useSelector } from 'react-redux'
+import { getAllSocialMedia } from '../../store/actions/footerAction'
 
+const index = ({ data }) => {
+  const dispatch = useDispatch()
+  const { socialMedia } = useSelector(state => state.footer)
 
-const footerData = [
-  [
-        "Bonvivir",
-        "Nosotros",
-        "Blog",
-        "Test:descubrí tu selección",
-        "Singular",
-        "Eventos",
-        "Bonvivir en los medios"
-  ],
-  [
-        "Club",
-        "Que es el club",
-        "Selecciones",
-        "Experiencia",
-        "Bodegas",
-        "Máridages",
-        "Ranking de Vinos",
-  ],
-  [
-        "Tienda",
-        "Categoria 1",
-        "Categoria 2",
-        "Categoria 3",
-        "Seguimiento de Pedidos",
-  ],
-  [
-        "Ayuda",
-        "Contactos",
-        "Preguntas Frecuentes",
-        "Mas Gestiones",
-        "Términos y condiciones",
-        "Eventos",
-        "Politicas de privacidad",
-  ]
-]
+  useEffect(() => {
+    dispatch(getAllSocialMedia())
+  }, [])
 
-const index = ({data}) => {
-  data = footerData;
   return (
-    <div> 
-      <Container>
-        <RowContainer>
-          {data.map((ul, index) => (
-            <List key={index}>
-              {ul.map((li, indexI) => 
-                <li key={indexI}>{li}</li>  
-              )}
-            </List>
-          ))}
-          <List>
-            <li>Seguinos</li>
-            <li>
-              <SocialNetwork>
-                <Facebook/>
-                <Instagram/>
-                <Youtube/>
-                <Twitter/>
-              </SocialNetwork>
-            </li>
-          </List>
-        </RowContainer>
-        <Wording>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit eros eu neque tincidunt, commodo tristique sapien tempor. Ut vitae pretium nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque non urna efficitur, lacinia magna vel, volutpat libero. Phasellus consequat, eros et aliquam tincidunt, nulla ante pulvinar orci, at pretium quam dui ut purus. Nunc mollis eros id leo laoreet, a congue urna elementum. Nam lacinia cursus placerat. Integer tempor tortor augue, in venenatis quam maximus ac. 
-        </Wording>
-      </Container>
-    </div>
-  );
-};
+    <Container>
+      <ContainerContent style={{ display: 'flex', justifyContent: 'center' }}>
+        <Columns menu={data[0] || []} />
+        <Columns menu={data[1] || []} />
+        <Columns menu={data[2] || []} />
+        <div style={{ textTransform: 'uppercase', margin: '1em 0 2em 5em' }}>
+          <h5>AYUDA</h5>
+          <div>
+            {MENU_FOOT_HELP.map((item, index) => (
+              <div
+                key={index}
+                style={{
+                  marginBottom: '1em',
+                }}
+              >
+                <a
+                  target={item.target}
+                  href={item.href}
+                  style={{ textDecoration: 'none', fontSize: '0.8em', color: '#fff' }}
+                >
+                  {item.text}
+                </a>
+              </div>
+            ))}
+            <RegretButton
+              data={{
+                label: 'Botón de arrepentimiento',
+                href: '/p-arrepentimiento',
+              }}
+            />
+          </div>
+        </div>
+        <MediaColumn menu={socialMedia} />
+      </ContainerContent>
+      <Wording>
+        <spam style={{ textTransform: 'uppercase', fontSize: '1.1em' }}>
+          Beber con moderación. - Prohibida la venta de bebidas alcohólicas a menores de 18 años -
+          Ley nacional de lucha contra el alcoholismo Nro. 24.788.
+        </spam>
+        <br />
+        <spam style={{ textTransform: 'uppercase', fontSize: '1.1em' }}>
+          COPYRIGHT 2019 PUBLIREVISTAS S.A.
+        </spam>{' '}
+        | Todos los derechos reservados | terminos y condiciones - Dirección General de Defensa y
+        Protección al Consumidor - Consultas y/o denuncias:{' '}
+        <a
+          href="http://www.buenosaires.gob.ar/defensaconsumidor"
+          target="_blank"
+          style={{ color: '#fff' }}
+        >
+          INGRESE AQUÍ
+        </a>
+      </Wording>
+    </Container>
+  )
+}
 
-index.defaultTypes = {
-  data:[]
-};
-
-export default index;
+export default index
